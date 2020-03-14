@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>従業員一覧 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<section class="alert_wrapper">
+			<section class="alert_innner">
+				<section class="alert_box2 save_yellow"><span class="alert_ico right_10"><img src="../../public/images/ico_alert_dakoku.svg"></span>勤務地情報を登録後、入力を行ってください</section>
+			</section>
+		</section>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;従業員一覧</span></p>
+			<div class="title_wrapper">
+				<h1>従業員一覧</h1>
+			</div>
+			<p class="red">勤務地を選択してください</p>
+		</section>
+		<section class="default_table">
+			<table _fixedhead='rows:1; cols:2;'>
+				<tr>
+					<th class="s_8">勤務地ID</th>
+					<th class="s_20">勤務地</th>
+					<th class="s_8">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td></td>
+				</tr>
+			</table>
+		</section>
+	</main>
+</body>
+</html>

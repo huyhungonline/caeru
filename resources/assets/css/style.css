@@ -1,0 +1,1612 @@
+/* 検索結果テキストボックス設定 */
+.search_box ul{
+	float:left
+}
+	
+.search_box ul li{
+	margin-right:30px;
+	margin-bottom:20px;
+}
+
+	
+/*-------　contents　-------*/
+/*　共通　*/
+main{
+	padding:0 0 30px 0;
+}
+
+.breadcrumb{
+	font-size:86%;
+	line-height:1;
+	margin:6px 0 14px;
+}
+
+.breadcrumb a,.breadcrumb span{
+    font-size: inherit;
+	line-height:1;
+	vertical-align:top;
+}
+
+.breadcrumb a{
+	text-decoration:underline;
+}
+	
+.second{
+	margin:10px 0;
+    min-height: 26px;
+    font-size: inherit;
+    display: block;
+}
+
+.top_position{
+    vertical-align:top;
+}
+
+.bottom_position{
+    vertical-align:bottom;
+}
+
+.bottom_align{
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+/* 登録画面テーブル */	
+	
+.setting_table table tr td,.admin_table table tr td{
+	text-align:left;
+	padding:0 20px;
+}
+
+.setting_table table tr .input_items{
+	background:#eff2f5;
+	width:24%;
+}
+
+.setting_table h2,.admin_table h2{
+	font-size: 129%;
+	margin:0 0 2px 0.5%;
+}
+
+.required{
+	font-size:79%;
+	padding:2px 8px;
+	background:#cc0000;
+	color:#fff;
+	margin-right:8px;
+    margin-top: -2px; 
+}
+
+table tr td span{
+    display: inline-block;
+}
+
+.setting_table td, .setting_table tr,.default_table td, .default_table tr{
+	overflow:visible;
+}
+
+.default_table{
+    overflow: hidden;
+}
+
+#attendance_detail .default_table{
+    overflow: visible;
+    position: relative;
+    height: auto;
+}
+
+
+/*　ページャー　*/
+.pager{
+	text-align:center;
+	position:relative;
+	width:100%;
+	margin:0 auto;
+	bottom:0;
+	left:0;
+}
+
+.pager ul{
+	display:inline-block;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+
+.pager ul li a{
+	display:inline-block;
+	min-width:26px;
+	height:26px;
+	border:1px solid #ccc;
+	margin-right:10px;
+	line-height:2.2;
+    font-size: 86%;
+}
+
+.pager ul li a.approval_paginate {
+    cursor: pointer;
+}
+
+.pager ul li span{
+    margin-right:10px;
+}
+
+.pager .last{
+	margin-top:10px;
+}
+
+.pager input{
+    padding: 0;
+}
+
+.right_position{
+	position:absolute;
+	bottom:10px;
+	right:0.5%;
+	text-align:right;
+}
+
+.right_position2{
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+
+.left_position{
+	position:absolute;
+	left:0.5%;
+    bottom:10px;
+}
+
+.left_position2{
+	position:absolute;
+	bottom:8px;
+	left:0;
+}
+
+.left_position2 span{
+	line-height:0;
+}
+
+.left_position span{
+    vertical-align:-6%;
+}
+
+.pager ul li .active{
+	background:#a5bc02;
+	color:#fff;
+}
+
+/* 検索結果　*/
+.search_result{
+	padding:10px 30px;
+	border:1px solid #ccc;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+
+.search_result .resule_innner{
+	width:80%;
+	float:left;
+	line-height:2.2;
+}
+
+
+/*-------　ログイン　-------*/
+#login_wrapper{
+	width:600px;
+	padding:20px;
+	margin:100px auto;
+}
+
+#login_wrapper .login_logo img{
+	width:40%;
+	height:40%;
+	display:block;
+	margin:0 auto;
+}
+
+#login_wrapper span{
+	display:block;
+}
+
+#login_wrapper section{
+	overflow:hidden;
+}
+
+#login_wrapper div{
+	width:250px;
+	margin:30px auto 30px;
+}
+
+#login_wrapper section.input_panel_row{
+    overflow: visible;
+    display: table;
+}
+
+#login_wrapper section.input_panel_row span{
+    display: table-cell;
+}
+
+#login_wrapper div.input_wrapper{
+    display: table-cell;
+    margin:0;
+}
+
+#login_wrapper div.error_wrapper{
+    margin:0;
+}
+
+#login_wrapper div > section.input_panel_row:first-child .tool_error{
+    bottom: 11px;
+}
+
+#login_wrapper .auth_failed_message{
+    color: red;
+}
+
+#login_wrapper div section{
+	margin-bottom:20px;
+}
+
+/*-------　基本情報　-------*/	
+
+#basic h1{
+	border-left:14px solid #adce00;
+	padding-left:10px;
+	margin:6px 0 10px;
+	display:block;
+}
+
+#basic .default_table input{
+	text-align:center;
+    padding: 0;
+}
+
+.ico_delete{
+	width:36px;
+	height:36px;
+}
+
+.ico_balloon{
+	width:24px;
+	height:24px;
+	margin-top:-2px;
+}
+
+.ico_balloon:hover {
+    cursor: pointer
+}
+.ico_ico_arrow{
+	width:26px;
+	height:26px;
+    cursor: pointer;
+}
+
+.ico_ico_arrow2{
+	width:60px;
+	height:28px;
+}
+
+.ico_ico_arrow3{
+	width:28px;
+	height:28px;
+	border-radius:50%;
+}
+
+.arrow_font{
+    font-size: 140%;
+    vertical-align:1px!important;
+}
+
+.add_item{
+	padding:10px 0 10px 30px;
+	background:#9b9b9c;
+	margin-bottom:10px;
+    height: 46px;
+}
+
+.add_item .search_box span{
+	color:#fff;	
+}
+
+.select_one{
+	overflow:hidden;
+	width:100%;
+	margin:0 auto;
+	display: table;
+	position:relative;
+	top:0;
+	left:0;
+	height:auto;
+    padding: 10px 0;
+}
+
+.select_one.const{
+    overflow: visible;
+}
+
+.select_one2{
+	width:100%;
+	margin:0 auto 10px;
+	display: table;
+	position:relative;
+	left:0;
+	top:10px;
+	padding:0 0 10px 0;
+	min-height:26px;
+	height:26px;
+}
+
+.select_one3{
+	overflow:hidden;
+	width:100%;
+	margin:0 auto;
+	display: table;
+	position:relative;
+	top:0;
+	left:0;
+	height:auto;
+}
+
+.select_one4{
+	width:99%;
+	margin:0 auto 10px;
+	display: table;
+	position:relative;
+	left:0;
+	top:10px;
+	padding:0 0 10px 0;
+	min-height:26px;
+	height:26px;
+}
+
+.select_one .select_one_inner,.select_one2 .select_one_inner,.select_one3 .select_one_inner{
+	display: table-cell;
+	text-align: center;
+}
+
+.select_one .select_one_inner section,.select_one2 .select_one_inner section{
+	display:inline;
+    vertical-align: bottom;
+}
+
+.select_one .select_one_inner span,.select_one2 .select_one_inner .select_one_name {
+	font-size: 158%;
+	font-weight:normal;
+	line-height:0;
+    vertical-align: middle;
+}
+
+.select_one .select_one_inner span span{
+	font-size: 100%;
+}
+
+.select_one_inner .text_bold{
+	font-weight:bold;
+}
+
+
+.select_one_name{
+	vertical-align:5.8%;
+}
+
+.ico_position{
+	vertical-align:8%;
+}
+
+.title_wrapper .select_one{
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:0;
+}
+
+.work_location_picker .select_one{
+    overflow:hidden;
+    width:100%;
+    margin:0 auto;
+    display: table;
+    position:relative;
+    top:0;
+    left:0;
+    height:auto;
+    padding: 10px 0;
+}
+
+/*  管理者権限  */
+.admin_table table tr td{
+	border-bottom:1px dashed #ccc;
+}
+
+.admin_table table tr:last-child{
+	border-bottom:1px solid #ccc;	
+}
+
+/* カレンダー */
+.calendar_table{
+	display:table;
+	width:100%;
+	margin:0 auto 10px auto;
+	border-collapse: separate;
+	border-spacing: 10px 0;
+}
+
+.calendar_table li{
+	display:table-cell;
+	text-align:center;
+	vertical-align:top;
+}
+
+.calendar_table li table{
+	table-layout: fixed;
+}
+
+.calendar_table li table th{
+	font-weight:bold;
+}
+
+.calendar_table li table th,.calendar_table li table td{
+	min-height:36px;
+	height:36px;
+}
+
+.calendar_table li table td{
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.calendar_table li table{
+	border:1px solid #ccc;
+}
+
+.calendar_table input{
+    text-align: center;
+    padding: 0;
+}
+
+table .closing_date{
+	background:#f2f2f2;
+}
+
+table .closing_date2{
+	background:#fff;
+}
+
+.calender_wrap{
+	position:relative;
+}
+
+.calender_wrap .side_input_block{
+	position:absolute;
+	top:1px;
+	right:4%;
+}
+
+.calender_wrap .side_input_block input{
+	text-align:center;
+	margin:0 4px 2px 0;
+}
+
+.holiday_box{
+	width:26px;
+	height:26px;
+}
+
+.bg_light_green{
+	background:#f3f9dc;
+}
+
+.arrow_gray{
+	width:26px;
+	height:26px;
+	line-height:0;
+}
+
+/*　ポップアップカレンダー　*/
+.select_calendar{
+	width:400px;
+}
+
+.select_calendar table tr td{
+	border-left-style:none;
+	border-right-style:none;	
+}
+
+.select_calendar table{
+	border:1px solid #ccc;
+}
+
+.year_month_select{
+	height:46px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	width:99%;
+	margin:0 auto;
+	background:#eff2f5;
+    display: block!important;
+}
+
+.year_month_select div{
+	margin-top:9px;
+}
+
+.year_month_select .arrow a{
+	padding:0 10px;
+}
+
+.approval_pop_up_wrapper {
+    z-index:1600;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:120%;
+}
+
+.approval_pop_up {
+    position: fixed;
+    display: block;
+    width: 80%;
+    top: 35%;
+    left: 10%;
+    z-index:2000;
+    margin: 0px;
+    padding:20px 20px 0 20px;
+    border:1px solid #ccc;
+    background:#fff;
+}
+
+.caeru_import_wrapper {
+    z-index:1600;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:120%;
+}
+
+.caeru_import_inner {
+    position: fixed;
+    display: block;
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    z-index:2000;
+    margin: -125px 0 0 0;
+    padding:20px 20px 0 20px;
+    border:1px solid #ccc;
+    background:#fff;
+}
+
+.approval_pop_up_wrapper .select_one{
+    overflow:visible;
+    width:100%;
+    margin:0 auto;
+    display: table;
+    position:relative;
+    top:0;
+    left:0;
+    height:auto;
+    padding: 10px 0;
+}
+
+
+/* Work Location Picker module*/
+.caeru_date_picker_wrapper,
+.work_location_picker_wrapper {
+    z-index:1600;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+}
+
+/*.tranfer_date_picker {
+	position: relative;
+	z-index: 2000;
+}
+*/
+.work_location_picker {
+    position: fixed;
+    display: block;
+    width: 80%;
+    top: 20%;
+    left: 10%;
+    z-index:2000;
+    margin: 0px;
+    padding:20px 20px 0 20px;
+    border:1px solid #ccc;
+    background:#fff;
+}
+
+.work_location_picker h2,
+.approval_pop_up h2 {
+    font-size: 158%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.work_location_picker .table{
+    overflow-y:scroll;
+    overflow-x: hidden;
+    max-height:360px;
+    position: relative;
+    background: #fff;
+}
+
+
+/*　グーグルマップ　*/
+/*位置表示*/
+.place-picker {
+	position: fixed;
+	display: block;
+	top: 50%;
+	left: 50%;
+	z-index:2000;
+	margin-top: -270px;
+	margin-left: -300px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding:20px 20px 0 20px;
+	border:1px solid #ccc;
+	background:#fff;
+}
+
+.place-picker-wrapper {
+	z-index:1600;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+}
+
+.caeru_date_picker_wrapper .modal-overlay,
+.work_location_picker_wrapper .modal-overlay,
+.place-picker-wrapper .modal-overlay,
+.caeru_import_wrapper .modal-overlay,
+.approval_pop_up_wrapper .modal-overlay {
+	display: block;
+}
+
+.pac-container { 
+	z-index:2500 !important;
+	position: fixed !important;
+}
+
+.gmap_wrapper{
+	width:600px;
+	height:540px;
+}
+
+.gmap_wrapper .gmap_position{
+	width:560px;
+	height:380px;
+	margin:0 auto 20px;
+	border:1px solid #ccc;
+}
+
+/*取得*/
+.get_gmap_wrapper{
+	width:600px;
+	height:540px;	
+}
+
+.get_gmap_wrapper .get_gmap_position{
+	width:560px;
+	height:300px;
+	margin:0 auto 30px;
+	border:1px solid #ccc;	
+}
+
+.get_gmap_position .map-container {
+    width: 560px;
+    height: 300px;
+}
+
+.gmap_position .map-container {
+	width: 560px;
+	height: 380px;
+}
+
+.get_gmap_position .infowindow-content {
+	display: none;
+}
+
+.get_gmap_position .map-container .infowindow-content {
+	display: inline;
+}
+
+/*　勤怠承認　*/
+.approval_wrapper table td,.approval_wrapper table th{
+	font-size:86%;
+	height:30px;
+	min-height:30px;
+    line-height: 2;
+}
+
+.approval_text{
+    vertical-align: 4px;
+}
+
+/* 勤務表 */
+
+.work_plan table td{
+	padding:0 10px;
+	text-align:left;
+}
+
+.work_plan table td input{
+    text-align: center;
+}
+
+.work_plan table td input,.work_plan table td select{
+	font-size:86%;	
+}
+
+.work_plan table th{
+	height:24px;
+}
+
+.bold_border{
+	border-bottom:solid 2px #ccc;
+}
+
+.enpty_box{
+    text-indent: 2em;
+}
+
+
+/*　承認者　*/
+.authorizer{
+    border:1px solid #ccc;
+    padding-bottom: 0!important;
+}
+/*-------　勤怠管理　-------*/
+
+#attendance h1,#attendance_detail h1{
+	border-left:14px solid #df8d00;
+	padding-left:10px;
+	margin:6px 0 10px;
+	display:block;
+}
+
+.attendance_table,.work_info_table{
+	overflow:auto;
+	width:99%;
+	margin:0 auto;
+}
+
+.work_info_table th{
+	height:47px;
+}
+
+.work_info_table tr td p{
+	height:26px;
+}
+
+/*　就業形態アイコン　*/
+.employ_ico{
+    font-size: 86%;
+    background: #fff;
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+    line-height: 1.4;
+    border:1px solid #ccc;
+}
+
+.attendance_table .employ_ico{
+    line-height: 1.5;
+}
+
+.check_table span,.approval_table span,.search_table span{
+    vertical-align: text-top;
+}
+
+
+/*　勤怠データ管理　*/
+
+.attendance_table .s_size{
+	width:40px;
+}
+
+.attendance_table .m_size{
+	width:60px;
+}
+
+.attendance_table .l_size{
+	width:120px;
+}
+
+.attendance_table .ll_size{
+	width:200px;
+}
+
+.attendance_table th,.attendance_table td{
+	height:24px!important;
+	min-height:20px!important;
+	font-size:86%;
+}
+
+.attendance_table table tr th p,.attendance_table table tr th span{
+    font-size: inherit;
+}
+
+.attendance_table table tr td a p{
+	line-height:1.6;
+	font-size:86%;
+}
+
+.attendance_table table tr th p{
+	line-height:1.6;    
+}
+
+.attendance_table table tr td a,.search_table td .name,.approval_table table tr td a,.work_info_table table tr td a{
+	text-decoration: underline;	
+}
+
+.attendance_table table tr td a:hover,.search_table td .name:hover,.approval_table table tr td a:hover,.work_info_table table tr td a:hover{
+	text-decoration:none;
+}
+
+.search_table,.approval_table{
+	margin-bottom:10px;
+}
+
+td.visit_place{
+	text-align:left;
+	padding:0 10px;
+	font-weight:bold;
+    height: 34px!important;
+}
+
+td.visit_place a{
+    font-size: 100%;
+}
+
+/* 勤怠詳細 */
+
+.detail_table,#attendance_detail .default_table{
+	margin-bottom:30px;
+}
+
+.detail_table{
+	width:99%;
+	margin:0 auto 20px;
+    z-index: -100;
+    overflow: hidden;
+}
+
+.detail_table .first{
+	width:86%;
+}
+
+tr{
+    background-color: #fff;
+}
+
+.detail_table .secound,.detail_table .secound2{
+	width:13%;	
+}
+	
+#attendance_detail .detail_table tr th,#attendance_detail .detail_table tr td,#attendance_detail .default_table th,#attendance_detail .default_table td{
+	font-size:86%;
+}
+
+#attendance_detail table td .selectbox{
+    font-size: inherit;
+}
+
+#attendance_detail input{
+	text-align:center;
+}
+
+#attendance_detail td input,.work_plan td input{
+    padding: 0;
+}
+
+.search_table td,.detail_table th{
+	height:24px!important;
+	min-height:20px!important;
+}
+
+.search_table .short_height th{
+	height:24px!important
+}
+
+.search_table table tr th p{
+    line-height: 1.3;
+}
+
+.detail_table .secound th{
+	height:72px!important;	
+}
+
+.detail_table .secound2 th{
+	height:48px!important;	
+}
+
+.detail_table .secound td,.detail_table .secound2 td{
+	height:76px!important;
+}
+
+.detail_table .secound td textarea,.detail_table .secound2 td textarea{
+/*	height:66px;*/
+	margin:0px auto 0;
+	font-size:108%;
+	padding:6px;
+	width:90%;
+}
+
+.detail_table,.default_table {
+/*    position: relative;*/
+    background:#fff;
+}
+
+.lock_table{
+    position: relative;    
+}
+
+.salary_table table th{
+    border-top-style: none;
+}
+
+.overlay{
+    display: none;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.75);
+}
+
+.transfer_wrap{
+    position: relative;
+    display: inline;
+}
+
+.transfer{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    padding: 20px 20px 0;
+    border:1px solid #ccc;
+    display:none;
+    z-index: 1000;
+    background: #fff;
+    opacity: 1.0;
+    margin-right: 10px;
+}
+
+.transfer table tr .month_day{
+    width: 60%;
+}
+
+.transfer .btn{
+    margin:20px;
+    display: block!important;
+}
+
+.transfer table{
+    table-layout: fixed;
+}
+
+.change_possible{
+    border-radius: 50%;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    line-height: 2.2!important;
+    color:#fff;
+}
+
+.candidate{
+    background:#b5b5b5; 
+}
+
+.selected,a.change_possible:hover{
+    background:#9fb63d;
+    border-radius: 6px;
+}
+
+.application_box{
+    overflow: hidden;
+}
+
+/* レイヤー */
+.approval_box{
+	background:#b4d9ee;
+	border:1px solid #d6e8f3;
+	height:40px;
+	width:160px;
+	padding:6px 0 0 10px;
+}
+
+.add_btn{
+	margin-right:0.5%;
+}
+
+
+/*　勤怠承認　*/
+.approval_wrapper table td,.approval_wrapper table th{
+	font-size:86%;
+	height:30px;
+	min-height:30px;
+}
+
+.approval_wrapper{
+	width:80%;
+	background:#fff;
+	padding:20px 20px 0 20px;
+    z-index: 1601;
+}
+
+.approval_wrapper .approval_wrapper_innner,.approval_wrapper .check{
+	overflow:hidden;
+}
+
+.approval_wrapper .approval_wrapper_innner{
+	overflow-y:scroll;
+	max-height:500px;
+}
+
+.approval_wrapper_innner .box{
+	width:49%;
+	border:1px solid #ccc;
+	padding:10px 20px;
+	margin-bottom:10px;
+}
+
+.approval_wrapper_innner .stamp{
+	margin-top:10px;
+}
+
+.approval_wrapper_innner .stamp table{
+	width:100%;
+}
+
+.approval_wrapper_innner .stamp_time td{
+	text-align:left;
+	padding-left:10px;
+}
+
+.approval_wrapper_innner .stamp_time .first{
+	text-align:center;
+	padding:0;
+}
+
+.approval_wrapper_innner .stamp_time .time{
+	font-size:108%!important;
+}
+
+.approval_wrapper_innner .request_box p{
+	font-size:86%;	
+}
+
+.approval_wrapper_innner .request_box{
+	overflow:hidden;
+}
+
+.approval_wrapper_innner .request_text{
+	text-align:left;
+	overflow:hidden;
+	vertical-align:top;
+	padding:6px 0 0 6px;
+}
+
+.approval_wrapper_innner .stamp .text_height textarea{
+	width:90%;
+	height:50px;
+	margin:6px auto;
+    font-size: inherit;
+}
+
+.overtime_wrapper{
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.overtime_wrapper table{
+    width:100%;
+}
+
+.overtime_wrapper th{
+    height: 60px;
+}
+
+.overtime_wrapper td{
+    height: 42px;
+}
+
+.overtime_wrapper textarea{
+    width: 90%;
+}
+
+.overtime_wrapper span{
+    font-size: 100%!important;
+}
+
+.overtime_inner{
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.overtime_inner th p{
+    margin: 6px;
+}
+
+.left_page, .right_page {
+    border: 1px solid #ccc;
+    padding: 14px;
+    width: 49.6%;
+}
+
+.overtime_inner .contact{
+    font-size: 86%;
+    overflow: hidden;
+    padding: 16px 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.overtime_inner .contact textarea {
+    font-size: inherit;
+    height: 50px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.overtime_inner .description{
+    overflow: hidden;
+}
+
+.result_dakoku{
+	padding:10px;
+	border:1px dashed #ccc;
+}
+
+/* 申請アイコン */
+
+.ico_now{
+	background:#adce00;    
+}
+
+.ico_approval{
+	background:#91c5e0;
+}
+
+.ico_request{
+	background:#efd66a;
+}
+
+.ico_error{
+	background:#e5b6b9;
+}
+
+.ico_negation{
+	background:#b9b1b3;
+}
+
+.ico_before_request{
+	background:#e695b9;	
+}
+
+.ico_box{
+	width:70px;
+/*	height:26px;*/
+	color:#fff;
+	text-align:center;
+}
+
+/* 打刻の色の説明 */
+
+.day_off_wrap{
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.description_text,.description_confirm_list,.description_day_off1,.description_day_off2{
+	font-size:86%;
+	line-height:1.2;
+}
+
+.description_text::before{
+	width:20px;
+	height:18px;
+	border:1px solid #cccccc;
+	margin:3px 4px 0 0;
+	background-size: 10px 10px;
+	content:" ";
+	display:inline-block;
+	vertical-align:-30%;
+    box-sizing: border-box;
+}
+
+.description_confirm_list::before{
+	background:#fff;
+    height:18px;
+    padding:2px 8px 0;
+	border:1px solid #cccccc;
+	margin:3px 4px 0 0;
+	background-size: 10px 10px;
+	content: "08:00";
+	display:inline-block;
+    color:#c1483b;
+    box-sizing: border-box;
+}
+
+.description_mistake::before{
+	background:#edcccf;
+}
+
+.description_request::before{
+	background:#f5e9b7;
+}
+
+.description_approval::before{
+	background:#b4d9ee;
+}
+
+.description_reject::before{
+	background:#ebebeb;
+}
+
+.description_correction::before{
+	background:#d3dd45;
+}
+
+.description_no_assignment::before{
+	background:#e874a4;
+}
+
+.description_day_off1::before{
+	height:18px;
+	margin:3px 4px 0 0;
+	content:"1/1(月)";
+	display:inline-block;
+	background:#f5e1e5;
+	padding:2px 10px 0;
+	text-align:center;
+	line-height:1.2;
+	border-radius:10px;
+    vertical-align:text-bottom;
+    box-sizing: border-box;
+}
+
+.description_day_off2::before{
+	height:18px;
+	margin:3px 4px 0 0;
+	content:"1/2(火)";
+	display:inline-block;
+	background:#d3e7f9;
+	padding:2px 10px 0;
+	text-align:center;
+	line-height:1.2;
+	border-radius:10px;
+    vertical-align:text-bottom;
+    box-sizing: border-box;
+}
+
+
+/* 個人別詳細 */
+.search_table .blue_holiday{
+	padding:3px 8px;
+	border-radius:20px;
+}
+
+.search_table .pink_holiday{
+	padding:3px 8px;
+	border-radius:20px;	
+}
+
+.line_right_none{
+	border-right-style: hidden;
+}
+
+.lock_request,.lock_request2{
+	position: absolute;
+	top: 0px;
+	left: 0.5%;
+	background-color: #f5e9b7;
+	opacity:0.5;
+	height: 100%;
+    width: 99%;
+}
+
+.lock_request2{
+    width: 100%;
+    left: 0;   
+}
+
+.lock_close,.lock_close2 {
+    position: absolute;
+    top: 0;
+    left: 0.5%;
+    background-color: #ccc;
+    opacity: 0.5;
+    height: 100%;
+    width: 99%;
+}
+
+.lock_close2{
+    width: 100%;
+    left: 0;
+}
+
+.first_box{
+    height:149px;
+}
+
+/*
+.second_box{
+    height:114px;
+}
+*/
+
+.day_off_box{
+	margin:0 0 10px 0.5%;
+}
+
+.person_result_table{
+	overflow:hidden;
+	margin:10px 0.5% 30px;
+}
+
+.person_result_table th{
+	height:30px;
+	min-height:30px;
+}
+
+.person_result_table .secound th{
+	height:60px;	
+}
+
+.person_result_table table tr th p{
+    line-height: 1.6;
+}
+
+.person_result_table table tr td,.person_result_table table tr td span{
+    font-size:93%;
+}
+
+.open_btn{
+	width: 99%;
+	margin: 0 0.5% 0;
+    text-align: right;
+}
+
+.open_btn p{
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 勤怠集計 */
+.search_table{
+	overflow:hidden;
+}
+
+.term{
+	display:inline;
+}
+
+.term span{
+    font-size: 100%!important;
+}
+
+/* 勤怠検索 */
+.round{
+	padding:4px 10px;
+	border-radius:6px;
+	margin-bottom:6px;
+}
+
+/* チェックリスト */
+.check_table{
+    overflow: hidden;
+    width: 99%;
+    margin: 0 auto;
+}
+
+.check_table table{
+    width: 100%;
+}
+
+.titile_wrap {
+    position: relative;
+    padding-bottom: 0px;
+    border-bottom: 4px solid #edcccf;
+    margin-bottom: 8px;
+}
+
+.titile_wrap::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    z-index: 2;
+    content: '';
+    width: 20%;
+    height: 4px;
+    background-color: #cc0000;
+}
+
+/*　ホーム　*/
+
+#notice_list h1,#home_page h1,#notice_page h1{
+    border-left: 14px solid #5286bf;
+    display: block;
+    margin: 6px 0 10px;
+    padding-left: 10px;
+}
+
+#home_page .notice_wrapper{
+    width: 98%;
+    margin:0 auto;
+}
+
+#home_page .list_number{
+    width: 38%;    
+}
+
+#home_page .list_number{
+    width: 98%;
+    margin: 0 auto 40px;
+}
+
+#home_page .list_number dl{
+    overflow:hidden;
+    font-size: 129%;
+    border-top:1px dashed #ccc;
+    padding: 6px 0 5px;
+}
+
+#home_page .list_number dl:last-child{
+    border-bottom:1px dashed #ccc;    
+}
+
+#home_page .list_number dl dt{
+    font-size: inherit;
+    width: 260px;
+}
+
+#home_page .list_number dl dd{
+    font-size: inherit;
+    width: 60%;
+}
+
+#home_page .list_number dl dd a{
+    font-size: inherit;    
+}
+
+#home_page .list_number dl dd a:hover,.notice_box dl dd a:hover{
+    text-decoration:underline;
+}
+
+/*　お知らせアイコン　*/
+.notice{
+    margin-right: 10px;
+    margin-top: 1px;
+    font-size:79%;
+    color:#fff;
+    width: 80px;
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.update{
+    background:#2fbdf0;
+}
+
+.disability{
+    background:#ec6868;    
+}
+
+.info{
+    background:#f6aa2a;    
+}
+
+.notice_title{
+    position: relative;
+    top:0;
+    left: 0;
+}
+
+.notice_title .button{
+    position:absolute;
+    top: 10px;
+    right:0px;
+}
+
+.notice_box dl{
+    overflow:hidden;
+    border-top:1px dashed #ccc;
+    padding: 10px 0;
+}
+
+.notice_box dl:last-child{
+    border-bottom:1px dashed #ccc;    
+}
+
+.notice_box dl dt{
+    width: 260px;
+    float: left;
+}
+
+/*　お知らせリスト　*/
+.notice_list_wrapper,.notice_wrapper{
+    width: 99%;
+    margin:0 auto;
+}
+
+/*　お知らせ詳細　*/
+
+#notice_page h2{
+    font-size: 143%;
+    margin-top: 0px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #ccc;
+}
+
+#notice_page h2 span{
+    display: inline-block;
+    float: none;
+    font-size: 60%;
+    line-height: 2;
+}
+
+.notice_page_wrapper{
+    text-align: center;
+    width: 99%;
+    margin: auto;
+}
+
+.notice_page_wrapperr h3{
+    font-size: 129%;
+    margin-bottom: 20px;
+}
+
+.notice_page_wrapper .year_day{
+    text-align: right;
+}
+
+.notice_page_wrapper p{
+    margin-bottom: 6px;
+}
+
+/*　エラー　*/
+#error_wrapper{
+    width: 1000px;   
+    margin:100px auto;
+    overflow: hidden;
+}
+
+#error_wrapper .caeru{
+    width:160px;
+    margin: auto;
+}
+
+#error_wrapper .caeru img{
+    width:200px;
+    height:auto;
+}
+
+#error_wrapper .message{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#error_wrapper .message h1{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>訪問先詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js">
+	</script>
+	<script src="../assets/js/caerujs/script.js">
+	</script>
+</head>
+<body>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;<a href="basic_visit_place_list.html">訪問先一覧</a></span><span>&emsp;&#62;&emsp;訪問先詳細</span></p>
+			<div class="title_wrapper">
+				<h1>訪問先詳細</h1>
+			</div>
+		</section>
+        <section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30 ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+				<section class="right_30 text_bold">
+					<span class="right_10">00002</span><span>広島中央ビルエントランス</span>
+				</section>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+        <section class="select_one2">
+        <section class="tab">
+			<p class="tab_button"><a class="tab_size btn_greeen left right_10" href="basic_s_visit_place.html">設定</a></p>
+			<p class="tab_button"><a class="tab_size tab_btn_gray left" href="basic_s_visit_place_plan.html">訪問予定</a></p>
+		</section>
+        </section>
+		<section class="setting_table">
+			<table>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>訪問先ID</td>
+					<td>00001</td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>訪問先名</td>
+					<td>広島中央ビルエントランス</td>
+				</tr>
+				<tr>
+					<td class="input_items">フリガナ</td>
+					<td>ヒロシマビルエントランス</td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>勤務地名</td>
+					<td>広島本社</td>
+				</tr>
+				<tr>
+					<td class="input_items">状態</td>
+					<td>有効</td>
+				</tr>
+				<tr>
+					<td class="input_items">郵便番号</td>
+					<td>000-1111</td>
+				</tr>
+				<tr>
+					<td class="input_items">住所</td>
+					<td>
+						<section class="second">
+							広島県安芸郡府中町青崎
+						</section>
+						<section class="second">
+							<span class="right_30">打刻許容範囲100m</span><span class="right_30">緯度333.33</span><span class="right_30">緯度333.33</span> <span><a class="modal-open" data-target="con1"><img class="ico_balloon" src="../../public/images/map_balloon.svg"></a></span>
+						</section>
+					</td>
+				</tr>
+				<tr>
+					<td class="input_items">電話番号</td>
+					<td>
+						<div class="search_box">
+							082-258-2988
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="input_items">責任者名</td>
+					<td>山田華子</td>
+				</tr>
+				<tr>
+					<td class="input_items">責任者名(カナ)</td>
+					<td>ヤマダハナコ</td>
+				</tr>
+				<tr>
+					<td class="input_items">責任者メールアドレス</td>
+					<td>h_yamamoto@ols.jp</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="basic_visit_place_list.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<div class="modal-content gmap_wrapper" id="con1">
+		<h2>GPS位置情報</h2>
+		<section class="gmap_position">
+			<img src="../../public/images/sample_map.png">
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font">閉じる</a></p>
+		</section>
+	</div>
+</body>
+</html>

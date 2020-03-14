@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>カレンダー | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js">
+	</script>
+	<script src="../assets/js/caerujs/script.js">
+	</script>
+</head>
+<body>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;カレンダー</span></p>
+			<div class="title_wrapper">
+				<h1>カレンダー</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30 ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+				<section class="right_30 ll_font">
+					2016年
+				</section>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+        <section class="select_one2">
+		<section class="tab">
+			<div class="search_box left right_30">
+				<p class="holiday_box pink_holiday left right_10"></p>
+				<p class="holiday left"><span class="right_10">法定休日</span><span class="right_10">1</span><span>日</span></p>
+			</div>
+			<div class="search_box left">
+				<p class="holiday_box blue_holiday left right_10"></p>
+				<p class="holiday left"><span class="right_10">一般休日</span><span class="right_10">1</span><span>日</span></p>
+			</div>
+			<p class="left left_30 red">フレックスの場合はカレンダーの月の横に所定労働時間を記入します</p>
+		</section>
+        </section>
+		<section class="calendar">
+			<ul class="calendar_table">
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>1月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">1</td>
+							<td class="closing_date sunday">2</td>
+							<td class="pink_holiday">3</td>
+							<td class="closing_date">4</td>
+							<td class="closing_date">5</td>
+							<td class="blue_holiday">6</td>
+							<td class="closing_date saturday">7</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">8</td>
+							<td class="closing_date sunday">9</td>
+							<td class="pink_holiday">10</td>
+							<td class="closing_date">11</td>
+							<td class="closing_date">12</td>
+							<td class="blue_holiday">13</td>
+							<td class="closing_date saturday">14</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">15</td>
+							<td class="closing_date">16</td>
+							<td class="pink_holiday">17</td>
+							<td class="closing_date">18</td>
+							<td class="closing_date">19</td>
+							<td class="blue_holiday">20</td>
+							<td class="saturday">21</td>
+						</tr>
+						<tr>
+							<td class="sunday">22</td>
+							<td>23</td>
+							<td class="pink_holiday">24</td>
+							<td>25</td>
+							<td>26</td>
+							<td class="blue_holiday">27</td>
+							<td class="saturday">28</td>
+						</tr>
+						<tr>
+							<td class="sunday">29</td>
+							<td>30</td>
+							<td class="pink_holiday">31</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>2月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>1</td>
+							<td>2</td>
+							<td class="blue_holiday">3</td>
+							<td class="saturday pink_holiday">4</td>
+						</tr>
+						<tr>
+							<td class="sunday">5</td>
+							<td>6</td>
+							<td class="blue_holiday">7</td>
+							<td>8</td>
+							<td>9</td>
+							<td class="blue_holiday">10</td>
+							<td class="sunday pink_holiday">11</td>
+						</tr>
+						<tr>
+							<td class="sunday">12</td>
+							<td>13</td>
+							<td>14</td>
+							<td>15</td>
+							<td>16</td>
+							<td class="blue_holiday">17</td>
+							<td class="saturday pink_holiday">18</td>
+						</tr>
+						<tr>
+							<td class="sunday">19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="closing_date">22</td>
+							<td class="closing_date">23</td>
+							<td class="blue_holiday">24</td>
+							<td class="pink_holiday saturday">25</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td class="closing_date">29</td>
+							<td class="closing_date">30</td>
+							<td class="blue_holiday">31</td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>3月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="closing_date">1</td>
+							<td class="closing_date">2</td>
+							<td class="closing_date">3</td>
+							<td class="closing_date saturday">4</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">5</td>
+							<td class="closing_date">6</td>
+							<td class="closing_date">7</td>
+							<td class="closing_date">8</td>
+							<td class="closing_date">9</td>
+							<td class="closing_date">10</td>
+							<td class="closing_date saturday">11</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">12</td>
+							<td class="closing_date">13</td>
+							<td class="closing_date">14</td>
+							<td class="closing_date">15</td>
+							<td class="closing_date">16</td>
+							<td class="closing_date">17</td>
+							<td class="closing_date saturday">18</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">19</td>
+							<td class="sunday">20</td>
+							<td>21</td>
+							<td>22</td>
+							<td>23</td>
+							<td>24</td>
+							<td class="saturday">25</td>
+						</tr>
+						<tr>
+							<td class="sunday">26</td>
+							<td>27</td>
+							<td>28</td>
+							<td>29</td>
+							<td>30</td>
+							<td class="saturday">31</td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>4月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="saturday blue_holiday">1</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td class="saturday blue_holiday">8</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">9</td>
+							<td>10</td>
+							<td>11</td>
+							<td>12</td>
+							<td>13</td>
+							<td>14</td>
+							<td class="saturday blue_holiday">15</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">16</td>
+							<td>17</td>
+							<td>18</td>
+							<td>19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="saturday blue_holiday">22</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">23</td>
+							<td class="closing_date">24</td>
+							<td class="closing_date">25</td>
+							<td class="closing_date">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td class="saturday blue_holiday">29</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>5月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="closing_date">1</td>
+							<td class="closing_date">2</td>
+							<td class="closing_date sunday">3</td>
+							<td class="closing_date sunday">4</td>
+							<td class="closing_date sunday">5</td>
+							<td class="saturday blue_holiday">6</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">7</td>
+							<td class="closing_date">8</td>
+							<td class="closing_date">9</td>
+							<td class="closing_date">10</td>
+							<td class="closing_date">11</td>
+							<td class="closing_date">12</td>
+							<td class="saturday blue_holiday">13</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">14</td>
+							<td class="closing_date">15</td>
+							<td class="closing_date">16</td>
+							<td class="closing_date">17</td>
+							<td class="closing_date">18</td>
+							<td class="closing_date">19</td>
+							<td class="saturday blue_holiday">20</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">21</td>
+							<td>22</td>
+							<td>23</td>
+							<td>24</td>
+							<td>25</td>
+							<td>26</td>
+							<td class="saturday blue_holiday">27</td>
+						</tr>
+						<tr>
+							<td class="sunday pink_holiday">28</td>
+							<td>29</td>
+							<td>30</td>
+							<td>31</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>6月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="saturday">1</td>
+						</tr>
+						<tr>
+							<td class="sunday">2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td class="saturday">8</td>
+						</tr>
+						<tr>
+							<td class="sunday">9</td>
+							<td>10</td>
+							<td>11</td>
+							<td>12</td>
+							<td>13</td>
+							<td>14</td>
+							<td class="saturday">15</td>
+						</tr>
+						<tr>
+							<td class="sunday">16</td>
+							<td>17</td>
+							<td>18</td>
+							<td>19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="closing_date saturday">22</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">23</td>
+							<td class="closing_date">24</td>
+							<td class="closing_date">25</td>
+							<td class="closing_date">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td class="closing_date saturday">29</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<ul class="calendar_table">
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>7月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">1</td>
+							<td class="closing_date">2</td>
+							<td class="closing_date">3</td>
+							<td class="closing_date">4</td>
+							<td class="closing_date">5</td>
+							<td class="closing_date">6</td>
+							<td class="closing_date saturday">7</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">8</td>
+							<td class="closing_date">9</td>
+							<td class="closing_date">10</td>
+							<td class="closing_date">11</td>
+							<td class="closing_date">12</td>
+							<td class="closing_date">13</td>
+							<td class="closing_date saturday">14</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">15</td>
+							<td class="closing_date">16</td>
+							<td class="closing_date sunday">17</td>
+							<td class="closing_date">18</td>
+							<td class="closing_date">19</td>
+							<td>20</td>
+							<td class="saturday">21</td>
+						</tr>
+						<tr>
+							<td class="sunday">22</td>
+							<td>23</td>
+							<td>24</td>
+							<td>25</td>
+							<td>26</td>
+							<td>27</td>
+							<td class="saturday">28</td>
+						</tr>
+						<tr>
+							<td class="sunday">29</td>
+							<td>30</td>
+							<td>31</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>8月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td class="saturday">4</td>
+						</tr>
+						<tr>
+							<td class="sunday">5</td>
+							<td>6</td>
+							<td>7</td>
+							<td>8</td>
+							<td>9</td>
+							<td>10</td>
+							<td class="sunday">11</td>
+						</tr>
+						<tr>
+							<td class="sunday">12</td>
+							<td>13</td>
+							<td>14</td>
+							<td>15</td>
+							<td>16</td>
+							<td>17</td>
+							<td class="saturday">18</td>
+						</tr>
+						<tr>
+							<td class="sunday">19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="closing_date">22</td>
+							<td class="closing_date">23</td>
+							<td class="closing_date">24</td>
+							<td class="closing_date saturday">25</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>9月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="closing_date">1</td>
+							<td class="closing_date">2</td>
+							<td class="closing_date">3</td>
+							<td class="closing_date saturday">4</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">5</td>
+							<td class="closing_date">6</td>
+							<td class="closing_date">7</td>
+							<td class="closing_date">8</td>
+							<td class="closing_date">9</td>
+							<td class="closing_date">10</td>
+							<td class="closing_date saturday">11</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">12</td>
+							<td class="closing_date">13</td>
+							<td class="closing_date">14</td>
+							<td class="closing_date">15</td>
+							<td class="closing_date">16</td>
+							<td class="closing_date">17</td>
+							<td class="closing_date sunday">18</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">19</td>
+							<td>20</td>
+							<td>21</td>
+							<td>22</td>
+							<td class="sunday">23</td>
+							<td>24</td>
+							<td class="saturday">25</td>
+						</tr>
+						<tr>
+							<td class="sunday">26</td>
+							<td>27</td>
+							<td>28</td>
+							<td>29</td>
+							<td>30</td>
+							<td>31</td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>10月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="saturday">1</td>
+						</tr>
+						<tr>
+							<td class="sunday">2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td class="saturday">8</td>
+						</tr>
+						<tr>
+							<td class="sunday">9</td>
+							<td>10</td>
+							<td>11</td>
+							<td>12</td>
+							<td>13</td>
+							<td>14</td>
+							<td class="saturday">15</td>
+						</tr>
+						<tr>
+							<td class="sunday">16</td>
+							<td>17</td>
+							<td>18</td>
+							<td>19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="closing_date saturday">22</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">23</td>
+							<td class="closing_date">24</td>
+							<td class="closing_date">25</td>
+							<td class="closing_date">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td class="closing_date saturday">29</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>11月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="closing_date sunday">1</td>
+							<td class="closing_date">2</td>
+							<td class="closing_date sunday">3</td>
+							<td class="closing_date">4</td>
+							<td class="closing_date">5</td>
+							<td class="closing_date saturday">6</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">7</td>
+							<td class="closing_date">8</td>
+							<td class="closing_date">9</td>
+							<td class="closing_date">10</td>
+							<td class="closing_date">11</td>
+							<td class="closing_date">12</td>
+							<td class="closing_date saturday">13</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">14</td>
+							<td class="closing_date">15</td>
+							<td class="closing_date">16</td>
+							<td class="closing_date">17</td>
+							<td class="closing_date">18</td>
+							<td class="closing_date">19</td>
+							<td class="saturday">20</td>
+						</tr>
+						<tr>
+							<td class="sunday">21</td>
+							<td>22</td>
+							<td class="sunday">23</td>
+							<td>24</td>
+							<td>25</td>
+							<td>26</td>
+							<td class="saturday">27</td>
+						</tr>
+						<tr>
+							<td class="sunday">28</td>
+							<td>29</td>
+							<td>30</td>
+							<td>31</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<th colspan="7">
+								<div class="calender_wrap">
+								<span>12月</span>
+								<div class="side_input_block">
+									<input class="ss_size40" name="" type="text"><span>時間</span>
+								</div>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<td class="sunday text_bold">日</td>
+							<td class="text_bold">月</td>
+							<td class="text_bold">火</td>
+							<td class="text_bold">水</td>
+							<td class="text_bold">木</td>
+							<td class="text_bold">金</td>
+							<td class="saturday text_bold">土</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="saturday">1</td>
+						</tr>
+						<tr>
+							<td class="sunday">2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td class="saturday">8</td>
+						</tr>
+						<tr>
+							<td class="sunday">9</td>
+							<td>10</td>
+							<td>11</td>
+							<td>12</td>
+							<td>13</td>
+							<td>14</td>
+							<td class="saturday">15</td>
+						</tr>
+						<tr>
+							<td class="sunday">16</td>
+							<td>17</td>
+							<td>18</td>
+							<td>19</td>
+							<td class="closing_date">20</td>
+							<td class="closing_date">21</td>
+							<td class="closing_date saturday">22</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">23</td>
+							<td class="closing_date">24</td>
+							<td class="closing_date">25</td>
+							<td class="closing_date">26</td>
+							<td class="closing_date">27</td>
+							<td class="closing_date">28</td>
+							<td class="closing_date saturday">29</td>
+						</tr>
+						<tr>
+							<td class="closing_date sunday">30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section class="btn">
+			<p class="button right_30"><a class="m_size l_height btn_greeen l_font" href="#">勤務地に反映</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+            <p class="button"><a class="m_size l_height btn_gray l_font" href="basic_first_calendar.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+		<section class="select_one">
+            <section class="select_one_innner">
+                <h2>勤務地変更</h2>
+                <section class="right_position">
+				    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な勤務地も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">勤務地ID</th>
+					<th class="s_8">勤務地</th>
+					<th class="s_5">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>広島県</td>
+					<td>50</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>岡山県</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

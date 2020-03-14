@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>訪問先別詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green"><a class="green" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="chosen_attendance yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="attendance_detail">
+		<section class="title">
+			<p class="breadcrumb"><span>勤怠管理</span>&emsp;&#62;&emsp;<a href="attendance_work_info.html">訪問先別勤務情報</a><span>&emsp;&#62;&emsp;訪問先別詳細</span></p>
+			<div class="title_wrapper">
+				<h1>訪問先別詳細</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+        <section class="select_one">
+			<section class="select_one_inner">
+                <section class="right_10">
+                    <span class="right_10">00001</span>
+                    <span class="right_10">広島中央ビルエントランス</span>
+                    <p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+                </section>
+			</section>
+		</section>
+		<section class="select_one bg_light_green">
+			<section class="select_one_inner">
+				<section class="right_10"><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a></section>
+				<section class="right_30 ll_font">前月</section>
+				<div class="selectbox side_input_block right_10"><select class="s_size"><option value="2016年">2016年</option><option selected="selected" value="2017年">2017年</option><option value="2018年">2018年</option></select></div>
+				<div class="selectbox side_input_block right_10">
+					<select class="s_size">
+						<option value="1月">1月</option>
+						<option value="2月">2月</option>
+						<option value="3月">3月</option>
+						<option value="4月">4月</option>
+						<option value="5月">5月</option>
+						<option value="6月">6月</option>
+						<option value="7月">7月</option>
+						<option value="8月">8月</option>
+						<option value="9月">9月</option>
+						<option value="10月">10月</option>
+						<option value="11月">11月</option>
+                        <option value="12月">12月</option>
+                    </select>
+                </div>
+				<section class="right_10 ll_font left_30">次月</section>
+				<section><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a></section>
+			</section>
+		</section>
+		<section class="select_one2">
+			<section class="left_position">
+				<div class="left right_10 description_correction description_text">修正</div>
+				<div class="left right_10 description_no_assignment description_text">未配属</div>
+			</section>
+		</section>
+			<table _fixedhead='rows:1; cols:2;'>
+				<tr>
+					<th class="s_14">日付</th>
+					<th class="s_8">出勤</th>
+					<th class="s_8">退勤</th>					
+					<th class="s_6">必要人数</th>
+					<th>従業員名</th>
+					<th class="s_10"></th>
+				</tr>
+				<tr>
+					<td><span class="saturday">2016/03/01(土)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)" checked="checked">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="sunday">2016/03/02(日)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/03(月)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td rowspan="2"><span>2016/03/04(火)</span></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td>12:00</td>
+					<td>13:00</td>
+					<td>1</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)" checked="checked">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/05(水)</span></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td class="bg_no_assignment">2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3"><span>2016/03/06(木)</span></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)" checked="checked">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>1</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="野田新(男)" checked="checked">野田新(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td>15:00</td>
+					<td>18:00</td>
+					<td class="bg_no_assignment">2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="三上緑(女)" checked="checked">三上緑(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="斎藤あいこ(女)">斎藤あいこ(女)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/07(金)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>1</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="saturday">2016/03/08(土)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="left_align"></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="sunday">2016/03/09(日)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/10(月)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/11(火)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/12(水)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/13(木)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/14(金)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="saturday">2016/03/15(土)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="left_align"></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="sunday">2016/03/16(日)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/17(月)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/18(火)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/19(水)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/20(木)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/21(金)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="saturday">2016/03/22(土)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="left_align"></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="sunday">2016/03/23(日)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/24(月)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/25(火)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/26(水)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/27(木)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span>2016/03/28(金)</span></td>
+					<td>09:00</td>
+					<td>13:00</td>
+					<td>2</td>
+					<td class="left_align">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="山田花子(女)">山田花子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="石田郁子(女)" checked="checked">石田郁子(女)</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="鈴木そうた(男)" checked="checked">鈴木そうた(男)</label>
+						</section>
+					</td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="saturday">2016/03/29(土)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="left_align"></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+				<tr>
+					<td><span class="sunday">2016/03/30(日)</span></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p></td>
+				</tr>
+			</table>
+			<section class="btn">
+			<p class="button right_30"><a class="m_size l_height btn_greeen l_font" href="#">保存</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="attendance_work_info.html">戻る</a></p>
+		</section>
+		</main>
+	<div class="modal-content select_location" id="con1">
+        <section class="select_one">
+            <section class="select_one_innner">
+                <h2>訪問先変更</h2>
+                <section class="right_position">
+				    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な訪問先も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">訪問先ID</th>
+					<th class="s_12">訪問先</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td>000001</td>
+					<td>広島中央ビルエントランス</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>000018</td>
+					<td>海田駅前ビル4F</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>306</td>
+					<td>広島駅タワーマンション1F</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>1193</td>
+					<td>広島そごう8F</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>海田駅前ビル4F</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

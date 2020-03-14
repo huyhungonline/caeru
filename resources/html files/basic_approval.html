@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>承認者詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+    <script src="../assets/js/caerujs/multiple-select.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+            <p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;承認者詳細</span></p>
+			<div class="title_wrapper">
+				<h1>承認者詳細</h1>
+                <section class="select_one">
+					<section class="select_one_inner">
+						<div class="search_setting">
+                            <span class="right_30">承認者</span>
+                            <span class="right_10">従業員ID</span><input class="s_size" name="" type="text" value="0001">
+                        </div>
+                        <div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text" value="山田太郎">
+                        </div>
+					</section>
+				</section>
+                <section class="right_position2">
+                    <div class="button">
+                        <a class="m_size s_height btn_greeen modal-open"  data-target="con1" href="#">承認者機能の移行</a>
+                    </div>
+				</section>
+			</div>
+		</section>
+        <section class="search_box_wrapper">
+			<div class="search_box_innner2">
+				<div>
+                    <div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="承認中の従業員" checked>承認中の従業員</label>
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+					</div>
+					<div class="search_box search_setting">
+						<span class="right_10 left">雇用状態</span>
+						<div class="selectbox s_size left">
+							<select class="s_size">
+                                <option value=""></option>
+								<option selected="selected" value="勤務中">勤務中</option>
+								<option value="休職中">休職中</option>
+								<option value="退職済">退職済</option>
+							</select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">所属先</span><div class="selectbox mm_size side_input_block">
+                        <select class="mm_size">
+                                <option value=""></option>
+								<option value="広島本社">広島本社</option>
+								<option value="岡山支社">岡山支社</option>
+								<option value="東京本社">東京本社</option>
+								<option value="長崎支社">長崎支社</option>
+                        </select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">部署</span>
+						<section class="form-group mm_size">
+							<select class="mm_size" id="ms" multiple="multiple">
+								<option value="1">営業</option>
+								<option value="2">事務</option>
+								<option value="3">総務</option>
+								<option value="4">経理</option>
+								<option value="5">企画</option>
+							</select>
+						</section>
+					</div>
+					<div class="button bottom_10 search_setting right_10">
+						<a class="s_size s_height btn_greeen" href="#">検索</a>
+					</div>
+                    <div class="button bottom_10 search_setting">
+						<a class="s_size s_height btn_gray" href="#">リセット</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pager">
+			<p>11件中1〜11件表示</p>
+			<ul>
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+		</section>
+		<section class="default_table">
+			<table _fixedhead='rows:1; cols:2;'>
+				<tr>
+                    <th class="s_4"></th>
+					<th class="s_10">従業員ID</th>
+					<th class="s_14">従業員名</th>
+					<th class="s_8">所属先</th>
+					<th class="s_8">雇用状態</th>
+				</tr>
+				<tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge" checked="checked"></label>
+						</div>
+                    </td>
+					<td>1000</td>
+					<td>長野りえ</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge" checked="checked"></label>
+						</div>
+                    </td>
+					<td>1010</td>
+					<td>佐藤亮子</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge" checked="checked"></label>
+						</div>
+                    </td>
+					<td>620</td>
+					<td>永井ひろこ</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge" checked="checked"></label>
+						</div>
+                    </td>
+					<td>105</td>
+					<td>伊藤瑛太</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge" checked="checked"></label>
+						</div>
+                    </td>
+					<td>30</td>
+					<td>加藤はるか</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>12</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>300</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+                    <td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+					<td>200</td>
+					<td>大内緑</td>
+					<td>広島本社</td>
+					<td>勤務中</td>
+				</tr>
+			</table>
+		</section>
+		<section class="pager">
+			<ul class="last">
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+		</section>
+        <section class="btn">
+            <p class="button"><a class="m_size l_height btn_gray l_font" href="basic_w_employee.html">戻る</a></p>
+        </section>
+	</main>
+    <div class="modal-content select_location" id="con1">
+		<section class="select_one">
+            <section class="select_one_innner">
+                <h2>承認者機能の移行</h2>
+            </section>
+        </section>
+        <section class="select_one bottom_10 authorizer">
+			<section class="select_one_inner">
+				<div>
+                    <div class="right_30 search_setting approval_text"><span class="ll_font">承認者</span></div>
+                    <div class="search_setting approval_text"><span class="right_10 ll_font">0001</span><span class="right_30 ll_font">山田太郎</span>
+                        <span class="arrow_font"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></div>
+                    <div class="search_setting">
+                        <span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+                    </div>
+                    <div class="search_setting">
+                        <span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+                    </div>
+                </div>
+			</section>
+		</section>
+        <section class="btn">
+            <p class="button right_30"><a class="modal-close m_size l_height btn_greeen l_font">移行する</a></p>
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+    <script>
+	   $(function() {
+	       $('#ms').change(function() {
+	           console.log($(this).val());
+	       }).multipleSelect({
+	           width: '100%'
+	       });
+	   });
+	</script>
+</body>
+</html>

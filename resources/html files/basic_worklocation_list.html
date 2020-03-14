@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>勤務地一覧 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;勤務地一覧</span></p>
+			<div class="title_wrapper">
+				<h1>勤務地一覧</h1>
+			</div>
+		</section>
+		<section class="pager">
+			<p>6件中1〜6件表示</p>
+			<ul>
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+			<p class="button right_position"><a class="m_size s_height btn_blue" href="basic_w_worklocation.html">新規登録</a></p>
+		</section>
+		<section class="default_table">
+			<table _fixedhead='rows:1; cols:1;'>
+				<tr>
+                    <th class="s_6">並び順</th>
+					<th class="s_8">勤務地ID</th>
+					<th class="s_12">勤務地名</th>
+					<th class="s_6">状態</th>
+					<th class="s_8">都道府県</th>
+					<th class="s_8">従業員数</th>
+					<th class="s_12">電話番号</th>
+					<th class="s_12">責任者名</th>
+					<th>責任者メールアドレス</th>
+					<th class="s_6"></th>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='1'></td>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>有効</td>
+					<td>広島</td>
+					<td>50</td>
+					<td>012-123-1234</td>
+					<td>山田太郎</td>
+					<td>yamada@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='2'></td>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>有効</td>
+					<td>岡山</td>
+					<td>20</td>
+					<td>111-222-3333</td>
+					<td>鈴木太郎</td>
+					<td>suzuki@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='3'></td>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>有効</td>
+					<td>東京</td>
+					<td>20</td>
+					<td>111-555-8888</td>
+					<td>東京太郎</td>
+					<td>tokyo@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='4'></td>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>無効</td>
+					<td>長崎</td>
+					<td>10</td>
+					<td>252-555-7777</td>
+					<td>長崎太郎</td>
+					<td>nagasaki@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='5'></td>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>有効</td>
+					<td>神奈川</td>
+					<td>30</td>
+					<td>252-555-7777</td>
+					<td>横浜花子</td>
+					<td>yokohama@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='6'></td>
+					<td>00006</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='7'></td>
+					<td>00007</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='8'></td>
+					<td>00008</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='9'></td>
+					<td>00009</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='10'></td>
+					<td>00010</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='11'></td>
+					<td>00011</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='12'></td>
+					<td>00012</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='13'></td>
+					<td>00013</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='14'></td>
+					<td>00014</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='15'></td>
+					<td>00015</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='16'></td>
+					<td>00016</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='17'></td>
+					<td>00017</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+                    <td><input class="ss_size" name="" type="text" value='18'></td>
+					<td>00018</td>
+					<td>鹿児島支社</td>
+					<td>有効</td>
+					<td>鹿児島</td>
+					<td>20</td>
+					<td>252-555-7777</td>
+					<td>鹿児島花子</td>
+					<td>kagosima@test_tenpo.jp</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_worklocation.html">詳細</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="pager">
+			<ul class="last">
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>テスト | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+	<script src="../assets/js/caerujs/multiple-select.js"></script>
+    <style>
+        .caeru_autocomplete_wrapper{
+            display: inline-block;
+            position: relative;
+            }
+    
+        
+        .caeru_autocomplete_wrapper ul{
+            width: 100%;
+/*            display: none;*/
+            position: absolute;
+            z-index: 9999;
+            top: 25px;
+            left: 0;
+            margin: 0;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;background: #fff;
+            box-shadow: 2px 5px 7px -1px #bdbdbd;
+            -moz-box-shadow: 2px 5px 7px -1px #bdbdbd;
+            -webkit-box-shadow: 2px 5px 7px -1px #bdbdbd;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="search_box_wrapper">
+        <div class="search_box_innner2">
+            <div class="search_box search_setting">
+						<span class="right_10 left">就労形態</span>
+						<div class="selectbox m_size left">
+							<select class="m_size">
+								<option selected="selected" value=""></option>
+								<option value="通常">通常</option>
+								<option value="変形労働">変形労働</option>
+								<option value="フレックス">フレックス</option>
+							</select>
+						</div>
+					</div>
+            <div class="search_box search_setting">
+                    <span class="rignt_10">訪問先</span>
+                <div class="caeru_autocomplete_wrapper">
+                    <input type="text" class="mm_size">
+                    <ul>
+                        <li class="active">
+                            <div class="caeru_autocomplete_row">
+                                <span class="">広島駅</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="caeru_autocomplete_row">
+                                <span class="">広島城</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="caeru_autocomplete_row">
+                                <span class="">パセーラ</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

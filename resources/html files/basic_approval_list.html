@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>承認者情報 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+    <script src="../assets/js/caerujs/multiple-select.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+                    <li><a href="basic_approval_list.html">承認者情報</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;承認者情報</span></p>
+			<div class="title_wrapper">
+				<h1>承認者情報</h1>
+			</div>
+		</section>
+        <section class="search_box_wrapper">
+			<div class="search_box_innner2">
+				<div>
+					<div class="search_setting">
+						<span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+					</div>
+					<div class="search_box search_setting">
+						<span class="right_10 left">雇用状態</span>
+						<div class="selectbox s_size left">
+							<select class="s_size">
+                                <option value=""></option>
+								<option selected="selected" value="勤務中">勤務中</option>
+								<option value="休職中">休職中</option>
+								<option value="退職済">退職済</option>
+							</select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">所属先</span><div class="selectbox mm_size side_input_block">
+                        <select class="mm_size">
+                                <option value=""></option>
+								<option value="広島本社">広島本社</option>
+								<option value="岡山支社">岡山支社</option>
+								<option value="東京本社">東京本社</option>
+								<option value="長崎支社">長崎支社</option>
+                        </select>
+						</div>
+					</div>
+					<div class="button bottom_10 search_setting right_10">
+						<a class="s_size s_height btn_greeen" href="#">検索</a>
+					</div>
+                    <div class="button bottom_10 search_setting">
+						<a class="s_size s_height btn_gray" href="#">リセット</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pager">
+			<p>11件中1〜11件表示</p>
+			<ul>
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+			<p class="button right_position"><a class="m_size s_height btn_blue" href="basic_approval.html">新規登録</a></p>
+		</section>
+		<section class="default_table">
+			<table _fixedhead='rows:1; cols:2;'>
+				<tr>
+					<th class="s_10">従業員ID</th>
+					<th class="s_14">従業員名</th>
+					<th class="s_8">所属先</th>
+					<th class="s_8">承認人数</th>
+					<th class="s_8">雇用状態</th>
+                    <th class="s_8"></th>
+				</tr>
+				<tr>
+					<td>100</td>
+					<td>山田たかし</td>
+					<td>広島本社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>20</td>
+					<td>田中さち</td>
+					<td>広島本社</td>
+					<td>18</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>103</td>
+					<td>鈴木ゆうた</td>
+					<td>広島本社</td>
+					<td>8</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>1</td>
+					<td>西田太郎</td>
+					<td>鹿児島支社</td>
+					<td>10</td>
+					<td>勤務中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td class="light_gray">3</td>
+					<td class="light_gray">宮田太郎</td>
+					<td class="light_gray">京都支社</td>
+					<td class="light_gray">10</td>
+					<td class="light_gray">退職済</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td class="light_gray">2</td>
+					<td class="light_gray">千葉太郎</td>
+					<td class="light_gray">鳥取支社</td>
+					<td class="light_gray">10</td>
+					<td class="light_gray">休職中</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_approval.html">詳細</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="pager">
+			<ul class="last">
+				<li class="left">
+					<a class="active" href="#">1</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+    <script>
+	   $(function() {
+	       $('#ms').change(function() {
+	           console.log($(this).val());
+	       }).multipleSelect({
+	           width: '100%'
+	       });
+	   });
+	</script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>勤怠集計 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+</head>
+<body>
+	<script>
+	   window.onload = function()
+	   {
+	      FixedMidashi.create();
+	   };
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green"><a class="green" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="chosen_attendance yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="attendance_detail">
+		<section class="title">
+			<p class="breadcrumb"><span>勤怠管理</span>&emsp;&#62;&emsp;勤怠集計</p>
+			<div class="title_wrapper">
+				<h1>勤怠集計</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			<section class="right_position2">
+				<table class="close_btn_inner right">
+					<tr>
+						<td class="text_bold bg_gray">管理者2</td>
+						<td><p class="button"><a class="m_size s_height btn_white" href="#">全てを締める</a></p></td>
+					</tr>
+				</table>
+			</section>
+			</div>
+		</section>
+		<section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30 ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+                <div class="selectbox side_input_block right_10"><select class="s_size"><option value="2016年">2016年</option><option selected="selected" value="2017年">2017年</option><option value="2018年">2018年</option></select></div>
+				<div class="selectbox side_input_block right_10">
+					<select class="s_size">
+						<option value="1月度">1月度</option>
+						<option value="2月度">2月度</option>
+						<option value="3月度">3月度</option>
+						<option value="4月度">4月度</option>
+						<option value="5月度">5月度</option>
+						<option value="6月度">6月度</option>
+						<option value="7月度">7月度</option>
+						<option value="8月度">8月度</option>
+						<option value="9月度">9月度</option>
+						<option value="10月度">10月度</option>
+						<option value="11月度">11月度</option>
+                        <option value="12月度">12月度</option>
+                    </select>
+                </div>
+				<p class="term right_30">2016年12月19日(月)<span class="right_10 left_10">〜</span>2017年1月20日(木)</p>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+		<section class="search_box_wrapper">
+			<div class="search_box_innner2">
+				<div>
+					<div class="search_setting">
+						<span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+					</div>
+					<div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input class="left" name="hugahuga" type="checkbox" value="申請中">申請中</label>
+					</div>
+					<div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input class="left" name="hugahuga" type="checkbox" value="承認済">承認済</label>
+					</div>
+					<div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input class="left" name="hugahuga" type="checkbox" value="打刻エラー">打刻エラー</label>
+					</div>
+					<div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input class="left" name="hugahuga" type="checkbox" value="判定エラー">判定エラー</label>
+					</div>
+					<div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input class="left" name="hugahuga" type="checkbox" value="締め未対応">締め未対応</label>
+					</div>
+					<div class="button bottom_10 search_setting right_10">
+						<a class="s_size s_height btn_greeen" href="#">検索</a>
+					</div>
+                    <div class="button bottom_10 search_setting">
+						<a class="s_size s_height btn_gray" href="#">リセット</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="approval_table">
+			<section class="pager">
+				<p>120件中1〜20件表示</p>
+				<ul>
+					<li class="left"><a href="#">&lt;&lt;</a></li>
+					<li class="left"><a href="#">&lt;</a></li>
+					<li class="left"><a class="active" href="#">1</a></li>
+					<li class="left"><a href="#">2</a></li>
+					<li class="left"><a href="#">3</a></li>
+					<li class="left"><a href="#">4</a></li>
+					<li class="left"><a href="#">5</a></li>
+					<li class="left"><a href="#">6</a></li>
+					<li class="left"><a href="#">7</a></li>
+					<li class="left"><a href="#">8</a></li>
+					<li class="left"><a href="#">9</a></li>
+					<li class="left"><a href="#">10</a></li>
+					<li class="left"><a href="#">&gt;</a></li>
+					<li class="left"><a href="#">&gt;&gt;</a></li>
+				</ul>
+				<section class="right_position">
+					<p class="button"><a class="m_size s_height btn_gray" href="#">csvダウンロード</a></p>
+				</section>
+            </section>
+			<table _fixedhead='rows:1; cols:2;'>
+				<tr>
+					<th class="s_10">従業員ID</th>
+					<th>名前</th>
+					<th class="s_10">申請数</th>					
+					<th class="s_10">申請中</th>
+					<th class="s_10">承認済</th>
+					<th class="s_10">打刻エラー</th>
+					<th class="s_10">判定エラー</th>
+					<th class="s_10">管理者1</th>
+					<th class="s_10">管理者2</th>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>
+						<a href="attendance_person.html"><span class="employ_ico">変</span>山田太郎</a>
+					</td>
+					<td>12</td>
+					<td class="red">10</td>
+					<td>2</td>
+					<td class="red">8</td>
+					<td>8</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>
+						<a href="attendance_person.html"><span class="employ_ico">フ</span>山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">2</td>
+					<td>3</td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_white" href="#">締める</a></p></td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">7</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">6</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">3</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00006</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">6</td>
+					<td>3</td>
+					<td class="red">2</td>
+					<td>3</td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00007</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">1</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00008</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">6</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00009</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00010</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00011</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00012</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">1</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00013</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">3</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00014</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">4</td>
+					<td>3</td>
+					<td></td>
+					<td><p class="button"><a class="ss_size s_height btn_white" href="#">締める</a></p></td>
+				</tr>
+				<tr>
+					<td>00015</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">8</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00016</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">3</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00017</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">2</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_white" href="#">締める</a></p></td>
+				</tr>
+				<tr>
+					<td>00018</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">7</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00019</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">7</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+				<tr>
+					<td>00020</td>
+					<td>
+						<a href="attendance_person.html">山田太郎</a>
+					</td>
+					<td>10</td>					
+					<td class="red">7</td>
+					<td>3</td>
+					<td class="red">7</td>
+					<td>3</td>
+					<td><img class="check_blue ico_ico_arrow3" src="../../public/images/ico_check_blue.svg"></td>
+					<td><p class="button"><a class="ss_size s_height btn_red" href="#"><img class="ico_ico_arrow2" src="../../public/images/ico_check_red.svg"></a></p></td>
+				</tr>
+			</table>
+		</section>
+		<section class="pager">
+			<ul>
+				<li class="left"><a href="#">&lt;&lt;</a></li>
+				<li class="left"><a href="#">&lt;</a></li>
+				<li class="left"><a class="active" href="#">1</a></li>
+				<li class="left"><a href="#">2</a></li>
+				<li class="left"><a href="#">3</a></li>
+				<li class="left"><a href="#">4</a></li>
+				<li class="left"><a href="#">5</a></li>
+				<li class="left"><a href="#">6</a></li>
+				<li class="left"><a href="#">7</a></li>
+				<li class="left"><a href="#">8</a></li>
+				<li class="left"><a href="#">9</a></li>
+				<li class="left"><a href="#">10</a></li>
+				<li class="left"><a href="#">&gt;</a></li>
+				<li class="left"><a href="#">&gt;&gt;</a></li>
+			</ul>
+		</section>
+		</main>
+	<div class="modal-content select_location" id="con1">
+		<section class="select_one">
+            <section class="select_one_innner">
+                <h2>勤務地変更</h2>
+                <section class="right_position">
+				    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な勤務地も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">勤務地ID</th>
+					<th class="s_8">勤務地</th>
+					<th class="s_5">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>広島県</td>
+					<td>50</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>岡山県</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

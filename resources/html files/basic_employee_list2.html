@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>従業員一覧 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+</head>
+<body>
+	<script>
+	window.onload = function()
+	{
+	   FixedMidashi.create();
+	};
+	</script>
+<section id="header_weapper">	
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span><span>&emsp;&#62;&emsp;従業員一覧</span></p>
+			<div class="title_wrapper">
+				<h1>従業員一覧</h1>
+				<div class="worklocation">
+					<div class="worklocation">
+						<div class="worklocation_inner">
+							<span class="right_10">広島本社</span>
+							<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search_result">
+			<section class="resule_innner">
+				<span class="red right_30">検索結果128件</span><span class="right_10 text_bold">状態</span><span class="right_30">勤務中</span><span class="right_10 text_bold">雇用形態</span><span class="right_30">正社員</span>
+			</section>
+			<section>
+				<p class="button right"><a class="m_size m_height btn_greeen" href="basic_employee_list_only.html">検索条件の変更</a></p>
+			</section>
+		</section>
+		<section class="pager">
+			<p>120件中1〜20件表示</p>
+			<ul>
+				<li class="left"><a href="#">&lt;&lt;</a></li>
+				<li class="left"><a href="#">&lt;</a></li>
+				<li class="left"><a class="active" href="#">1</a></li>
+				<li class="left"><a href="#">2</a></li>
+				<li class="left"><a href="#">3</a></li>
+				<li class="left"><a href="#">4</a></li>
+				<li class="left"><a href="#">5</a></li>
+				<li class="left"><a href="#">6</a></li>
+				<li class="left"><a href="#">7</a></li>
+				<li class="left"><a href="#">8</a></li>
+				<li class="left"><a href="#">9</a></li>
+				<li class="left"><a href="#">10</a></li>
+				<li class="left"><a href="#">&gt;</a></li>
+				<li class="left"><a href="#">&gt;&gt;</a></li>
+			</ul>
+			<section class="right_position">
+				<p class="button"><a class="m_size m_height btn_blue" href="basic_w_employee.html">新規登録</a></p>
+				<p class="button left_10"><a class="m_size m_height btn_gray modal-open" data-target="con1" href="#">ダウンロード</a></p>
+			</section>
+		</section>
+		<section class="default_table">
+			<table _fixedhead='rows:1; cols:1;'>
+				<tr>
+					<th class="s_6">表示No</th>
+					<th class="s_8">従業員ID</th>
+					<th class="s_12">従業員名</th>
+					<th class="s_14">所属先</th>
+					<th class="s_6">就労形態</th>
+					<th class="s_6">採用形態</th>
+					<th class="s_12">部署</th>
+					<th class="s_5">性別</th>
+					<th class="s_8">雇用状態</th>
+                    <th class="s_8">承認対象者</th>
+                    <th class="s_8">承認者</th>
+					<th class="s_12"></th>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='1'></td>
+					<td>00001</td>
+					<td>山田太郎</td>
+					<td>広島本社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='2'></td>
+					<td>00002</td>
+					<td>山田太郎</td>
+					<td>広島本社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='3'></td>
+					<td>00003</td>
+					<td>山田太郎</td>
+					<td>岡山支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='4'></td>
+					<td>00108</td>
+					<td>山田太郎</td>
+					<td>大阪支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='5'></td>
+					<td>00005</td>
+					<td>山田太郎</td>
+					<td>長崎支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='6'></td>
+					<td>00030</td>
+					<td>山田太郎</td>
+					<td>長崎支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='7'></td>
+					<td>01002</td>
+					<td>山田太郎</td>
+					<td>長崎支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='8'></td>
+					<td>00007</td>
+					<td>山田太郎</td>
+					<td>広島本社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='9'></td>
+					<td class="light_gray">00028</td>
+					<td class="light_gray">山田太郎</td>
+					<td class="light_gray">岡山支社</td>
+					<td class="light_gray">通常</td>
+					<td class="light_gray">正社員</td>
+					<td class="light_gray">営業部</td>
+					<td class="light_gray">男</td>
+					<td class="light_gray">休職中</td>
+                    <td class="light_gray underline"><a href="basic_approval.html">4人</a></td>
+                    <td class="light_gray">1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='10'></td>
+					<td class="light_gray">0022</td>
+					<td class="light_gray">山田太郎</td>
+					<td class="light_gray">岩手支社</td>
+					<td class="light_gray">通常</td>
+					<td class="light_gray">正社員</td>
+					<td class="light_gray">営業部</td>
+					<td class="light_gray">男</td>
+					<td class="light_gray">退職済</td>
+                    <td class="light_gray underline"><a href="basic_approval.html">4人</a></td>
+                    <td class="light_gray">1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_w_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='11'></td>
+					<td>00010</td>
+					<td>山田太郎</td>
+					<td>岡山支社</td>
+					<td>通常</td>
+					<td>正社員</td>
+					<td>営業部</td>
+					<td>男</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='12'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>岡山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='13'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>岡山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='14'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>和歌山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='15'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>和歌山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='16'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>和歌山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='17'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>和歌山支社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='18'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>広島本社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='19'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>広島本社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="ss_size" name="" type="text" value='20'></td>
+					<td>00011</td>
+					<td>鈴木花子</td>
+					<td>広島本社</td>
+					<td>フレックス</td>
+					<td>正社員</td>
+					<td>総務部</td>
+					<td>女</td>
+					<td>勤務中</td>
+                    <td class="underline"><a href="basic_approval.html">4人</a></td>
+                    <td>1人</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="basic_s_employee.html">詳細</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="pager">
+			<ul class="last">
+				<li class="left"><a href="#">&lt;&lt;</a></li>
+				<li class="left"><a href="#">&lt;</a></li>
+				<li class="left"><a class="active" href="#">1</a></li>
+				<li class="left"><a href="#">2</a></li>
+				<li class="left"><a href="#">3</a></li>
+				<li class="left"><a href="#">4</a></li>
+				<li class="left"><a href="#">5</a></li>
+				<li class="left"><a href="#">6</a></li>
+				<li class="left"><a href="#">7</a></li>
+				<li class="left"><a href="#">8</a></li>
+				<li class="left"><a href="#">9</a></li>
+				<li class="left"><a href="#">10</a></li>
+				<li class="left"><a href="#">&gt;</a></li>
+				<li class="left"><a href="#">&gt;&gt;</a></li>
+			</ul>
+		</section>
+		<section class="search_result">
+			<p class="button right"><a class="mm_size m_height btn_gray" href="#">フォーマットダウンロード</a></p>
+			<p class="button right_10 right"><a class="m_size m_height btn_gray modal-open" data-target="con1" href="#">インポート</a></p>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+		<h2>従業員情報インポート</h2>
+		<section class="upload_box">
+			<section class="btn">
+				<p class="button"><a class="m_size m_height btn_blue">ファイル選択</a></p>
+			</section>
+			<p>ファイルを選択するか、枠内にファイルをドラッグ＆ドロップしてください</p>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font right_30">インポート</a></p>
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

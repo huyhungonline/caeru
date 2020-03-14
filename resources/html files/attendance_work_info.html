@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>訪問先別勤務情報 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+	<script src="../assets/js/caerujs/multiple-select.js"></script>
+</head>
+<body>
+	<script>
+	window.onload = function()
+	{
+	   FixedMidashi.create();
+	};
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="chosen_attendance yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="attendance">
+		<section class="title">
+			<p class="breadcrumb"><span>勤怠管理</span><span>&emsp;&#62;&emsp;訪問先別勤務情報</span></p>
+			<div class="title_wrapper">
+				<h1>訪問先別勤務情報</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search_box_wrapper">
+			<div class="search_box_innner2">
+				<div>
+					<div class="search_setting">
+						<span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10 left">訪問先名</span>
+						<div class="selectbox left">
+							<select class="mm_size">
+								<option value="" selected></option>
+								<option value="広島中央ビルエントランス">広島中央ビルエントランス</option>
+								<option value="海田駅前ビル4F">海田駅前ビル4F</option>
+								<option value="広島駅タワーマンション1F">広島駅タワーマンション1F</option>
+								<option value="広島そごう8F">広島そごう8F</option>
+							</select>
+						</div>
+					</div>
+					<div class="button bottom_10 search_setting right_10">
+						<a class="s_size s_height btn_greeen" href="#">検索</a>
+					</div>
+                    <div class="button bottom_10 search_setting">
+						<a class="s_size s_height btn_gray" href="#">リセット</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="select_one">
+			<section class="select_one_inner">
+				<section class="right_10"><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left2.svg"></a></section>
+				<section class="right_30"><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a></section>
+				<section class="right_10"><input class="s_size" name="" type="text"></section>
+				<section class="right_10"><a class="modal-open" data-target="con1"><img class="ico_ico_arrow" src="../../public/images/ico_calendar.svg"></a></section>
+				<section class="right_10 ll_font">から</section>
+				<section class="button right_30"><a class="ss_size s_height btn_greeen" href="#">表示</a></section>
+				<section class="right_10"><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a></section>
+				<section><a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right2.svg"></a></section>
+			</section>
+			<section class="left_position">
+				<div class="left right_10 description_correction description_text">修正</div>
+				<div class="left right_10 description_no_assignment description_text">未配属</div>
+			</section>
+		</section>
+		<!-- 予定リスト -->
+		<div class="work_info_table">
+			<table _fixedhead='rows:2; cols:1;'>
+				<tr>
+					<th rowspan="2">
+						<div class="mm_size">予定</div>
+					</th>
+					<th colspan="5" class="bold_line"><span class="saturday">3月1日（土）</span></th>
+					<th colspan="5" class="bold_line"><span class="sunday">3月2日（日）</span></th>
+					<th colspan="5" class="bold_line">3月3日（月）</th>
+					<th colspan="5" class="bold_line">3月4日（火）</th>
+					<th colspan="5" class="bold_line">3月5日（水）</th>
+					<th colspan="5" class="bold_line">3月6日（木）</th>
+				</tr>
+				<tr>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+					<th><p class="ss_size">出勤</p></th>
+					<th><p class="ss_size">退勤</p></th>
+					<th><p class="ss_size">必要人数</p></th>
+					<th><p class="mm_size">従業員名</p></th>
+					<th class="bold_line"><p class="s_size"></p></th>
+				</tr>
+				<tr>
+					<td class="bg_gray"><a href="attendance_work_place.html"><p>000001</p><p>広島中央ビルエントランス</p></a></td>
+					<td>09:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">テスト花子(女)</p><p class="right_10 left_10 side_input_block">永井たくま(男)</p></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p><p class="right_10 left_10 side_input_block">永井たくま(男)</p></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>18:00</td>
+					<td>1</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+			    </tr>
+				    <tr>
+					<td class="bg_gray" rowspan="3"><a href="attendance_work_place.html"><p>000018</p><p>海田駅前ビル4F</p></a></td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>09:00</td>
+					<td>11:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="3">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td class="bg_no_assignment">2</td>
+					<td></td>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td>1</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p></td>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>12:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td></td>
+					<td></td>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td class="bg_no_assignment">2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p></td>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td>1</td>
+					<td></td>
+					<td>17:00</td>
+					<td>18:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td class="bg_gray" rowspan="5"><a href="attendance_work_place.html"><p>306</p><p>広島駅タワーマンション1F</p></a></td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td  class="bg_revised"><p class="right_10 left_10 side_input_block">野崎さくら(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bg_revised">09:00</td>
+					<td class="bg_revised">12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td class="bg_gray" rowspan="5"><a href="attendance_work_place.html"><p>1193</p><p>広島そごう8F</p></a></td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+					<td>07:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td class="bold_line" rowspan="5">
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_shift.html">訪問</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>08:00</td>
+					<td>10:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>10:00</td>
+					<td>12:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+				<tr>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+					<td>15:00</td>
+					<td>16:00</td>
+					<td>2</td>
+					<td><p class="right_10 left_10 side_input_block">山田花子(女)</p><p class="right_10 left_10 side_input_block">鈴木裕子(女)</p></td>
+				</tr>
+			</table>
+		</div>
+	</main>
+	<div class="modal-content select_calendar" id="con1">
+		<section class="year_month_select">
+			<div class="selectbox left right_10 left_10">
+				<select class="s_size">
+					<option value="2016年">2016年</option>
+					<option value="2017年">2017年</option>
+					<option value="2018年">2018年</option>
+				</select>
+			</div>
+			<div class="selectbox left">
+				<select class="s_size">
+					<option value="1月">1月</option>
+					<option value="2月">2月</option>
+					<option value="3月">3月</option>
+				</select>
+			</div>
+			<section class="right right_10">
+				<div class="arrow_gray left right_10">
+					<a href="#"><img src="../../public/images/ico_arrow_left_gray.svg"></a>
+				</div>
+				<div class="arrow_gray left">
+					<a href="#"><img src="../../public/images/ico_arrow_right_gray.svg"></a>
+				</div>
+			</section>
+		</section>
+		<section>
+			<table>
+				<tr>
+					<td class="sunday text_bold">日</td>
+					<td class="text_bold">月</td>
+					<td class="text_bold">火</td>
+					<td class="text_bold">水</td>
+					<td class="text_bold">木</td>
+					<td class="text_bold">金</td>
+					<td class="saturday text_bold">土</td>
+				</tr>
+				<tr>
+					<td class="pink_holiday">1</td>
+					<td class="pink_holiday">2</td>
+					<td class="pink_holiday">3</td>
+					<td class="closing_date">4</td>
+					<td class="closing_date">5</td>
+					<td class="closing_date">6</td>
+					<td class="blue_holiday">7</td>
+				</tr>
+				<tr>
+					<td class="pink_holiday">8</td>
+					<td class="closing_date">9</td>
+					<td class="closing_date">10</td>
+					<td class="closing_date">11</td>
+					<td class="closing_date">12</td>
+					<td class="closing_date">13</td>
+					<td class="blue_holiday">14</td>
+				</tr>
+				<tr>
+					<td class="pink_holiday">15</td>
+					<td class="closing_date">16</td>
+					<td class="closing_date">17</td>
+					<td class="closing_date">18</td>
+					<td class="closing_date">19</td>
+					<td class="closing_date">20</td>
+					<td class="blue_holiday">21</td>
+				</tr>
+				<tr>
+					<td class="pink_holiday">22</td>
+					<td class="closing_date2">23</td>
+					<td class="closing_date2">24</td>
+					<td class="closing_date2">25</td>
+					<td class="closing_date2">26</td>
+					<td class="closing_date2">27</td>
+					<td class="blue_holiday">28</td>
+				</tr>
+				<tr>
+					<td class="pink_holiday">29</td>
+					<td class="closing_date2">30</td>
+					<td class="closing_date2">31</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size m_height btn_gray">キャンセル</a></p>
+		</section>
+	</div>
+	<script>
+	   $(function() {
+	       $('#ms').change(function() {
+	           console.log($(this).val());
+	       }).multipleSelect({
+	           width: '100%'
+	       });
+	   });
+	</script>
+</body>
+</html>

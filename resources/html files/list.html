@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ページリスト</title>
+</head>
+	<style>
+		html, body, div, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video, img,input,textarea{
+			color:#464646;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-style:normal;
+			font-family:"Quicksand","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+			font-size: 14px;
+			line-height:1.9;
+			vertical-align:middle;
+		}
+
+
+		section,table,tr,td,th,div,.btn a,button{
+			box-sizing:border-box;
+		}
+
+		body {
+			line-height: 1.8;
+			font-size:14px;
+			width:90%;
+			margin:0 auto;
+		}
+		.box{
+			margin:0 0 30px 0;
+		}
+		
+		h1{
+			font-size:158%;
+			border-bottom:1px solid #ccc;
+			margin:10px 0 20px;
+			font-weight:normal;
+		}
+		
+		ul li{
+			list-style-type:none;
+		}
+		
+		h2{
+			font-size:129%;
+			font-weight:normal;
+			margin:0 0 10px 0;
+			border-bottom:1px dashed #ccc;
+		}
+		
+		ul li ul li{
+			padding:0 0 0 40px;
+			font-size:115%;
+		}
+		
+		.red{
+			color:#ff0000;
+		}
+		
+		.blue{
+			color:#00aec2;
+		}
+		
+        .uchikesi{
+            text-decoration:line-through;
+            }
+	</style>
+<body>
+    <p></p>
+	<h1>リニューアル勤怠管理画面一覧</h1>
+	<section class="box">
+		<h2>ホーム</h2>
+		<ul>
+			<li>
+				<p>ログイン</p>
+			<ul>
+				<li><a href="login.html" target="_blank">ログイン</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>ホーム</p>
+			<ul>
+				<li><a href="index.html" target="_blank">ホーム</a></li>
+			</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="box">
+		<h2>基本設定</h2>
+		<ul>
+			<li>
+				<p>管理者情報</p>
+			<ul>
+				<li><a href="basic_admin_list.html" target="_blank">管理者一覧</a></li>
+				<li><a href="basic_w_admin_authority.html" target="_blank">admin設定</a></li>
+				<li><a href="basic_w_admin.html" target="_blank">その他管理者設定</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>会社情報</p>
+			<ul>
+				<li><a href="basic_w_company.html" target="_blank">会社情報書入力</a></li>
+				<li><a href="basic_s_company.html" target="_blank">会社情報閲覧</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>勤務地情報</p>
+			<ul>
+				<li><a href="basic_worklocation_list.html" target="_blank">勤務地一覧</a></li>
+				<li><a href="basic_w_worklocation.html" target="_blank">勤務地入力</a></li>
+				<li><a href="basic_s_worklocation.html" target="_blank">勤務地閲覧</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>訪問先情報</p>
+			<ul>
+				<li><a href="basic_visit_place_list.html" target="_blank">訪問先一覧</a></li>
+				<li><a href="basic_w_visit_place.html" target="_blank">訪問先入力</a></li>
+				<li><a href="basic_s_visit_place.html" target="_blank">訪問先閲覧</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>従業員情報</p>
+			<ul>
+				<li><a href="basic_first_employee.html" target="_blank">従業員勤務地一覧</a></li>
+				<li><a href="basic_first_employee_error.html" target="_blank">従業員勤務地未登録エラー</a></li>
+				<li><a href="basic_employee_list.html" target="_blank">従業員一覧（会社）</a></li>
+				<li><a href="basic_employee_list_only.html" target="_blank">従業員一覧（店舗）</a></li>
+				<li><a href="basic_employee_list2.html" target="_blank">従業員一覧（検索後・店舗）</a></li>
+				<li><a href="basic_w_employee.html" target="_blank">従業員入力（基本）</a></li>
+				<li><a href="basic_w_employee2.html" target="_blank">従業員入力（再検索・基本）</a></li>
+				<li><a href="basic_s_employee.html" target="_blank">従業員閲覧（基本）</a></li>
+				<li><a href="basic_w_attendance_employee.html" target="_blank">従業員入力（勤怠）訪問先にチェックがある場合に訪問先欄を追加</a></li>
+				<li><a href="basic_s_attendance_employee.html" target="_blank">従業員閲覧（勤怠）</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>カレンダー</p>
+			<ul>
+				<li><a href="basic_first_calendar.html" target="_blank">カレンダー一覧</a></li>
+				<li><a href="basic_first_calendar_error.html" target="_blank">カレンダーエラー</a></li>				
+				<li><a href="basic_calendar.html" target="_blank">カレンダー入力</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>設定</p>
+			<ul>
+				<li><a href="basic_first_config.html" target="_blank">設定一覧</a></li>
+				<li><a href="basic_w_config.html" target="_blank">設定入力</a></li>
+				<li><a href="basic_s_config.html" target="_blank">設定閲覧</a></li>
+			</ul>
+			</li>
+			<li>
+				<p>項目設定</p>
+			<ul>
+				<li><a href="basic_first_formofwork.html" target="_blank">項目設定一覧</a></li>
+				<li><a href="basic_formofwork.html" target="_blank">勤務形態</a></li>
+				<li><a href="basic_department.html" target="_blank">部署</a></li>
+			</ul>
+			</li>
+
+		</ul>
+	</section>
+	<section class="box">
+		<h2>勤怠管理</h2>
+		<ul>
+			<li><p>勤怠データ管理</p>
+			<ul>
+				<li>☆<a href="attendance_management.html" target="_blank">勤怠データ管理</a></li>
+				<li>☆<a href="attendance_management_visit.html" target="_blank">勤怠データ管理（訪問先基準）訪問先欄を追加</a></li>
+			</ul>
+			</li>
+			<li><p>勤怠データ検索</p>
+			<ul>
+				<li>☆<a href="attendance_search.html" target="_blank">勤怠データ検索</a></li>
+			</ul>
+			</li>
+			<li><p>勤怠集計</p>
+			<ul>
+				<li>☆<a href="attendance_approval.html" target="_blank">勤怠集計</a></li>
+			</ul>
+			</li>
+			<li><p>個人別詳細</p>
+			<ul>
+				<li>☆<a href="attendance_person.html" target="_blank">個人別詳細</a></li>
+                <li>☆<a href="attendance_person_visit.html" target="_blank">個人別詳細（訪問先入り）</a></li>
+                <li>☆<a href="attendance_person_flextime.html" target="_blank" class="uchikesi">個人別詳細フレックスタイム</a></li>
+			</ul>
+			</li>
+			<li><p>有給休暇管理</p>
+			<ul>
+				<li>☆<a href="attendance_holiday_list.html" target="_blank">有給休暇管理一覧</a></li>
+                <li>☆<a href="attendance_holiday.html" target="_blank">有給休暇管理</a></li>
+                <li>☆<a href="attendance_holiday_details.html" target="_blank">詳細</a></li>
+			</ul>
+			</li>
+			<li><p>勤怠データ詳細</p>
+			<ul>
+				<li>☆<a href="attendance_details.html" target="_blank">勤務地（訪問先を利用しない場合）</a></li>
+                <li>☆<a href="attendance_details_visit.html" target="_blank">訪問先を利用する場合</a></li>
+                <li>☆<a href="attendance_details_lock_layer.html" target="_blank">締めた場合</a></li>
+                <li>☆<a href="attendance_details_request_layer.html" target="_blank">申請中</a></li>
+                <li>☆<a href="attendance_details_flextime.html" target="_blank" class="uchikesi">フレックス</a></li>
+			</ul>
+			</li>
+			<li><p>訪問先別勤務情報</p>
+			<ul>
+				<li>☆<a href="attendance_work_list.html" target="_blank">訪問先別勤務リスト</a></li>
+                <li>☆<a href="attendance_work_info.html" target="_blank">訪問先別勤務情報</a></li>
+                <li>☆<a href="attendance_work_place.html" target="_blank">訪問先別詳細</a></li>
+                <li>☆<a href="attendance_shift.html" target="_blank">訪問勤務詳細</a></li>
+			</ul>
+			</li>
+            <li><p>チェックリスト</p>
+			<ul>
+				<li>☆<a href="attendance_check_list.html" target="_blank">チェックリスト一覧</a></li>
+                <li>☆<a href="attendance_check.html" target="_blank">チェックリスト</a></li>
+			</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="box">
+		<h2>パーツ</h2>
+		<ul>
+			<li>
+			<ul>
+				<li><a href="parts.html" target="_blank">パーツ</a></li>
+			</ul>
+			</li>
+		</ul>
+	</section>	
+</body>
+</html>

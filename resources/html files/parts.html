@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>勤怠集計 | CAERU管理画面</title>
+<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/caerujs/script.js"></script>
+<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+<style>
+	body{
+		background:#f7fafc;
+	}
+	h1{
+		margin:10px 0 20px 10px;
+		font-size:110%;
+	}
+
+	.box{
+		margin-bottom:40px;
+	}
+	.height_test{
+		height:130px;
+	}
+</style>
+</head>
+<body>
+	<div class="box height_test">
+	<h1>入力欄のエラー</h1>
+		<span class="tool_error">入力エラー</span>
+	</div>
+	<div class="box">	
+	<h1>勤怠の修正などの時に上部に表示するアラート</h1>
+		<h2>保存ボタンを押すと表示します（attendance_details.html）</h2>
+		<div class="box">
+		<!-- start -->
+		<section class="alert_wrapper">
+			<section class="alert_innner">
+				<section class="alert_box save_green"><span class="alert_ico right_10"><img src="../../public/images/ico_alert_save.svg"></span>保存しました</section>
+			</section>
+		</section>
+		<!-- end -->
+		</div>
+		<div class="box">
+		<!-- start -->
+		<section class="alert_wrapper">
+			<section class="alert_innner">
+				<section class="alert_box save_red"><span class="alert_ico right_10"><img src="../../public/images/ico_alert_error.svg"></span>入力に誤りがあります</section>
+			</section>
+		</section>
+		<!-- end -->
+		</div>
+		<div class="box">
+		<!-- start -->		
+		<section class="alert_wrapper">
+			<section class="alert_innner">
+				<section class="alert_box save_yellow"><span class="alert_ico right_10"><img src="../../public/images/ico_alert_dakoku.svg"></span>打刻エラーを修正してください</section>
+			</section>
+		</section>
+		<!-- end -->
+		</div>
+		<section class="btn">
+			<p class="button right_30 save_btn"><a class="m_size l_height btn_greeen l_font" href="#">保存</a></p>
+		</section>
+		
+	</div>
+	<div class="box">	
+	<h1>読み込みのロード中のデザインです。画面の上下・左右の真ん中に入れてください</h1>
+		<div class="loader">Loading...</div>
+	</div>
+</body>
+</html>

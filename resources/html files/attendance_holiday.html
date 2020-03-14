@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>有給休暇管理 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+	<script src="../assets/js/caerujs/multiple-select.js"></script>
+</head>
+<body>
+	<script>
+	window.onload = function()
+	{
+	   FixedMidashi.create();
+	};
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green"><a class="green" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="chosen_attendance yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="attendance_detail">
+		<section class="title">
+			<p class="breadcrumb"><span>勤怠管理</span><span>&emsp;&#62;&emsp;有給休暇管理</span></p>
+			<div class="title_wrapper">
+				<h1>有給休暇管理</h1>
+                <div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search_box_wrapper">
+			<div class="search_box_innner2">
+				<div>
+                    <div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="更新必要者" checked>更新必要者</label>
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員ID</span><input class="s_size" name="" type="text">
+					</div>
+					<div class="search_setting">
+						<span class="right_10">従業員名</span><input class="m_size" name="" type="text">
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10 left">採用形態</span>
+						<div class="selectbox left">
+							<select class="m_size">
+								<option selected="selected" value=""></option>
+								<option value="正社員">正社員</option>
+								<option value="契約社員">契約社員</option>
+								<option value="パート">パート</option>
+								<option value="アルバイト">アルバイト</option>
+								<option value="派遣">派遣</option>
+							</select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">部署</span>
+						<section class="form-group mm_size">
+							<select class="mm_size" id="ms" multiple="multiple">
+								<option value="1">営業</option>
+								<option value="2">事務</option>
+								<option value="3">総務</option>
+								<option value="4">経理</option>
+								<option value="5">企画</option>
+							</select>
+						</section>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10 left">雇用状態</span>
+						<div class="selectbox left">
+							<select class="s_size">
+                                <option value=""></option>
+								<option selected="selected" value="勤務中">勤務中</option>
+								<option value="休職中">休職中</option>
+								<option value="退職済">退職済</option>
+							</select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10 left">週勤務日数</span>
+						<div class="selectbox left">
+							<select class="s_size">
+								<option selected="selected" value=""></option>
+								<option value="一般">一般</option>
+								<option value="週4日勤務">週4日勤務</option>
+                                <option value="週3日勤務">週3日勤務</option>
+                                <option value="週2日勤務">週2日勤務</option>
+                                <option value="週1日勤務">週1日勤務</option>
+                                <option value="手動入力">手動入力</option>
+							</select>
+						</div>
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">入社日</span><input class="m_size right_10" name="" type="text"><span class=" right_10">〜</span><input class="m_size right_10" name="" type="text">
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">勤続年数</span><input class="ss_size" name="" type="text"><span class="select_both_space">年</span><input class="ss_size right_4" name="" type="text"><span class="right_10">ヶ月</span><span class=" right_10">〜</span><input class="ss_size right_10" name="" type="text"><span class="right_10">年</span><input class="ss_size right_4" name="" type="text"><span>ヶ月</span>
+					</div>
+                    <div class="search_setting">
+						<span class="right_10">有給更新日</span><input class="ss_size" name="" type="text">
+					</div>
+                    <div class="search_box search_setting">
+						<span class="right_10">有給更新日が</span><input class="ss_size" name="" type="text"><span class="select_both_space">月</span><input class="ss_size right_4" name="" type="text"><span class="right_10">日</span><span class=" right_10">〜</span><input class="ss_size right_10" name="" type="text"><span class="right_10">月</span><input class="ss_size right_4" name="" type="text"><span class="right_10">日のうち従業員の出勤率が</span><input class="ss_size right_4" name="" type="text"><span>％未満</span>
+					</div>
+                    
+                    <div class="check_box_wrap search_setting">
+						<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="有給対象外">有給対象外</label>
+					</div>
+                    <div class="button bottom_10 search_setting right_10">
+						<a class="s_size s_height btn_greeen" href="#">検索</a>
+					</div>
+                    <div class="button bottom_10 search_setting">
+						<a class="s_size s_height btn_gray" href="#">リセット</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pager">
+            <sectoin class="left_position">
+                <section class="side_input_block right_10"><span class="right_10">チェックしたものを</span><p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p></section>
+                <section class="side_input_block">
+                    <p class="button"><a class="s_size s_height btn_white" href="#">全員を更新</a>              
+                </section>
+            </sectoin>
+			<p>120件中1〜20件表示</p>
+			<ul>
+				<li class="left"><a href="#">&lt;&lt;</a></li>
+				<li class="left"><a href="#">&lt;</a></li>
+				<li class="left"><a class="active" href="#">1</a></li>
+				<li class="left"><a href="#">2</a></li>
+				<li class="left"><a href="#">3</a></li>
+				<li class="left"><a href="#">4</a></li>
+				<li class="left"><a href="#">5</a></li>
+				<li class="left"><a href="#">6</a></li>
+				<li class="left"><a href="#">7</a></li>
+				<li class="left"><a href="#">8</a></li>
+				<li class="left"><a href="#">9</a></li>
+				<li class="left"><a href="#">10</a></li>
+				<li class="left"><a href="#">&gt;</a></li>
+				<li class="left"><a href="#">&gt;&gt;</a></li>
+			</ul>
+		</section>
+		<section class="approval_table">
+			<table _fixedhead='rows:1; cols:1;'>
+				<tr>
+					<th class="s_4">
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </th>
+					<th class="s_6">従業員ID</th>
+					<th class="s_8">従業員名</th>
+                    <th class="s_12">所属先</th>
+					<th class="s_6">週勤務日数</th>
+					<th class="s_8">入社日</th>
+					<th class="s_6">勤続年数</th>
+                    <th class="s_4">更新日</th>
+                    <th class="s_8">更新前年度出勤率</th>
+                    <th class="s_5">付与日数</th>
+                    <th class="s_8"><p>繰越日数</p><p>日:時間:分</p></th>
+                    <th class="s_8"><p>残日数</p><p>日:時間:分</p></th>
+                    <th>操作年月日</th>
+                    <th class="s_5">更新</th>
+                    <th class="s_5"></th>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00001</td>
+					<td><span class="employ_ico">フ</span>山田太郎</td>
+					<td>広島本社</td>
+                    <td>週４日</td>
+                    <td>2014/10/01</td>
+                    <td>2年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016-04-03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td><span class="employ_ico">変</span>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00105</td>
+					<td>花田ふき</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>10年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00004</td>
+					<td>野田陽子</td>
+					<td>岡山支社</td>
+                    <td>週3日</td>
+                    <td>2014/10/01</td>
+                    <td>5年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00006</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00007</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00008</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>04/01</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2016/04/03</td>
+                    <td>
+                        <p class="button"><a class="ss_size s_height btn_white" href="#">更新</a></p>
+                    </td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00014</td>
+					<td>野口ひさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>5年6ヶ月</td>
+                    <td>05/01</td>
+                    <td>92％</td>
+                    <td>15</td>
+                    <td>9日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/05/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00018</td>
+					<td>結城りさ</td>
+					<td>長崎支社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>06/01</td>
+                    <td>30％</td>
+                    <td>0</td>
+                    <td>9日00:00</td>
+                    <td>3日04:00</td>
+                    <td>2016/05/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00032</td>
+					<td>山田花子</td>
+					<td>広島本社</td>
+                    <td>週2日</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>02/01</td>
+                    <td>85％</td>
+                    <td>13</td>
+                    <td>10日00:00</td>
+                    <td>6日02:00</td>
+                    <td>2016/02/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00003</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>05/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/05/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>03/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2017/03/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>07/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/07/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>06/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/06/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>07/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/07/10</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>06/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/06/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>06/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/06/04</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>05/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/05/03</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>07/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/07/02</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+                <tr>
+					<td>
+                        <div class="check_onle_wrap">
+							<label class="checkbox_box"><input name="hugahuga" type="checkbox" value="hoge"></label>
+						</div>
+                    </td>
+                    <td>00002</td>
+					<td>鈴木みさこ</td>
+					<td>広島本社</td>
+                    <td>一般</td>
+                    <td>2014/10/01</td>
+                    <td>3年6ヶ月</td>
+                    <td>05/01</td>
+                    <td>92％</td>
+                    <td>13</td>
+                    <td>11日00:00</td>
+                    <td>13日04:00</td>
+                    <td>2016/05/04</td>
+                    <td></td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="attendance_holiday_details.html">詳細</a></p>
+					</td>
+				</tr>
+            </table>
+		</section>
+		<section class="pager">
+			<ul class="last">
+				<li class="left"><a href="#">&lt;&lt;</a></li>
+				<li class="left"><a href="#">&lt;</a></li>
+				<li class="left"><a class="active" href="#">1</a></li>
+				<li class="left"><a href="#">2</a></li>
+				<li class="left"><a href="#">3</a></li>
+				<li class="left"><a href="#">4</a></li>
+				<li class="left"><a href="#">5</a></li>
+				<li class="left"><a href="#">6</a></li>
+				<li class="left"><a href="#">7</a></li>
+				<li class="left"><a href="#">8</a></li>
+				<li class="left"><a href="#">9</a></li>
+				<li class="left"><a href="#">10</a></li>
+				<li class="left"><a href="#">&gt;</a></li>
+				<li class="left"><a href="#">&gt;&gt;</a></li>
+			</ul>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+		<h2>従業員情報インポート</h2>
+		<section class="upload_box">
+			<section class="btn">
+				<p class="button"><a class="m_size m_height btn_blue">ファイル選択</a></p>
+			</section>
+			<p>ファイルを選択するか、枠内にファイルをドラッグ＆ドロップしてください</p>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font right_30">インポート</a></p>
+			<p class="button"><a class="modal-close mm_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+	<script>
+	   $(function() {
+	       $('#ms').change(function() {
+	           console.log($(this).val());
+	       }).multipleSelect({
+	           width: '100%'
+	       });
+	   });
+	</script>
+</body>
+</html>

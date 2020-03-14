@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>従業員詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js">
+	</script>
+	<script src="../assets/js/caerujs/script.js">
+	</script>
+</head>
+<body>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span>&emsp;&#62;&emsp;<a href="basic_employee_list.html">従業員一覧</a><span>&emsp;&#62;&emsp;従業員詳細</span></p>
+			<div class="title_wrapper">
+				<h1>従業員詳細</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search_result">
+			<section class="resule_innner">
+				<span class="red right_30">検索結果128件</span><span class="right_10 text_bold">状態</span><span class="right_30">勤務中</span><span class="right_10 text_bold">雇用形態</span><span class="right_30">正社員</span>
+			</section>
+			<section>
+				<p class="button right"><a class="m_size m_height btn_greeen" href="#">再検索</a></p>
+			</section>
+		</section>
+		<section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30  ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+				<section class="right_30 text_bold">
+					<span class="right_30">00001</span><span>山田太郎</span>
+				</section>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+		<section class="select_one2">
+		<section class="tab">
+			<p class="tab_button"><a class="tab_size tab_btn_gray left right_10" href="basic_s_employee.html">基本</a></p>
+			<p class="tab_button"><a class="tab_size btn_yellow left" href="basic_s_attendance_employee.html">勤怠</a></p>
+		</section>
+        </section>
+		<section class="setting_table">
+			<table class="bottom_30">
+				<tr>
+					<td class="input_items">ICカード登録用番号</td>
+					<td>1111111111</td>
+				</tr>
+				<tr>
+					<td class="input_items">カード番号</td>
+					<td>134534</td>
+				</tr>
+				<tr>
+					<td class="input_items">有給休暇</td>
+					<td>
+						<span class="right_10">更新日</span><span class="right_30">6/1</span><span class="right_10">１日の労働時間</span><span class="right_30">8時間</span><span class="right_10">短時間労働者</span><span>週3日</span>
+					</td>
+				</tr>
+			</table>
+		</section>
+        <section class="work_plan">
+			<table>
+                <th>勤務設定</th>
+				<tr>
+					<td>
+                        <section class="second">
+							<p>勤務日は企業カレンダーに従う</p>
+						</section>
+						<section class="second dash_line">
+                            <p class="right_30 side_input_block"><span class="right_10">勤務日</span><span>2017/01/18〜2017/02/28</span></p>
+                        </section>
+                        <section class="second dash_line">
+                            <p class="right_30 side_input_block"><span>月・火・水・祝日は休む</span></p>
+                        </section>
+                        <section class="second dash_line">
+                            <p class="right_30 side_input_block"><span class="right_10">出勤</span><span>09:00</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">退勤</span><span>18:00</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">休憩</span><span>60</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">(内)深夜</span><span></span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">所定</span><span>8:00</span></p>
+                        </section>
+                        <section class="second dash_line">
+                            <p class="right_30 side_input_block"><span class="right_10">候補</span><span class="right_10">必要人数</span><span>3</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">勤務者</span><span>山田太郎</span></p>
+                        </section>
+                        <section class="second dashline">
+                            <p class="right_30 side_input_block"><span class="right_10">月給</span><span class="right_10">基本給</span><span>300000円</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">深夜</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">残業</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">控除</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">深夜控除</span><span></span>円</p>
+                            <p class="right_10 left_30 side_input_block">祝日</p>
+                            <p class="right_30 left_10 side_input_block"><span class="right_10">月給</span><span class="right_10">基本給</span><span>300000円</span></p>
+                            <p class="right_30 side_input_block"><span class="right_10">深夜</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">残業</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">控除</span><span></span>円</p>
+                            <p class="right_30 side_input_block"><span class="right_10">深夜控除</span><span></span>円</p>
+                        </section>
+                        <section class="second dash_line">
+                            <p class="right_30 side_input_block"><span class="right_10">交通費</span><span class="right_10">日額</span><span>100円</span></p>
+                        </section>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="basic_employee_list.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+        <section class="select_one">
+            <section class="select_one_innner">
+                <h2>勤務地変更</h2>
+                <section class="right_position">
+                    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な勤務地も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">勤務地ID</th>
+					<th class="s_8">勤務地</th>
+					<th class="s_5">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>広島県</td>
+					<td>50</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>岡山県</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

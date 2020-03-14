@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>管理者詳細  | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+	<script src="../assets/js/caerujs/fixed_midashi.js"></script>
+	<script src="../assets/js/caerujs/multiple-select.js"></script>
+</head>
+<body>
+	<script>
+	window.onload = function()
+	{
+	   FixedMidashi.create();
+	};
+	</script>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span>&emsp;&#62;&emsp;<a href="basic_admin_list.html">管理者一覧</a><span>&emsp;&#62;&emsp;管理者詳細 </span></p>
+			<div class="title_wrapper">
+				<h1>管理者詳細 </h1>
+			</div>
+		</section>
+		<section class="setting_table">
+			<table>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>管理者ID</td>
+					<td><input class="s_size" name="" type="text" value="admin"></td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>管理者名</td>
+					<td><span class="right_10">姓</span><input class="m_size right_30" name="" type="text"><span class="right_10">名</span><input class="m_size right_10" name="" type="text"></td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>管理者(カナ)</td>
+					<td><span class="right_10">セイ</span><input class="m_size right_30" name="" type="text"><span class="right_10">メイ</span><input class="m_size right_10" name="" type="text"></td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>パスワード</td>
+					<td><input class="s_size" name="" type="text"></td>
+				</tr>
+				<tr>
+					<td class="input_items"><span class="required">必須</span>パスワード再入力</td>
+					<td><input class="s_size" name="" type="text"></td>
+				</tr>
+				<tr>
+					<td class="input_items">IPアドレス制限</td>
+					<td>
+					<section class="second"><textarea class="m_size ll_height right_10"></textarea>からのアクセスだけを許可する
+					</section>
+					</td>
+				</tr>
+				<tr>
+					<td class="input_items">電話番号</td>
+					<td><input class="s_size right_10" name="" type="text"><span class="right_10">&#045;</span><input class="s_size right_10" name="" type="text"><span class="right_10">&#045;</span><input class="s_size right_10" name="" type="text"></td>
+				</tr>
+				<tr>
+					<td class="input_items">メールアドレス</td>
+					<td><input class="l_size" name="" type="text"></td>
+				</tr>
+			</table>
+		</section>
+		<section class="setting_table secound_block">
+			<h2>管理勤務地</h2>
+			<table>
+				<tr>
+					<td class="input_items">勤務地選択</td>
+					<td>会社</td>
+				</tr>
+			</table>
+		</section>
+		<section class="admin_table secound_block">
+			<h2>詳細設定</h2>
+			<table>
+				<tr>
+					<td rowspan="9" class="s_10 bg_gray">基本情報</td>
+					<td class="s_14 bg_gray">会社情報</td>
+					<td><label class="radio_text right_30"><input name="jyoho" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="jyoho" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="jyoho" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">勤務地情報</td>
+					<td><label class="radio_text right_30"><input name="worklocation" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="worklocation" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="worklocation" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+                <tr>
+					<td class="bg_gray">訪問先情報</td>
+					<td><label class="radio_text right_30"><input name="visitplace" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="visitplace" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="visitplace" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">従業員情報（基本）</td>
+					<td><label class="radio_text right_30"><input name="basic_employee" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="basic_employee" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="basic_employee" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">従業員情報（勤怠）</td>
+					<td><label class="radio_text right_30"><input name="basic_attendance" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="basic_attendance" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="basic_attendance" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">カレンダー</td>
+					<td><label class="radio_text right_30"><input name="calendar" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="calendar" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="calendar" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">設定</td>
+					<td><label class="radio_text right_30"><input name="config" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="config" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="config" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">項目設定（勤務形態）</td>
+					<td><label class="radio_text right_30"><input name="formofwork" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="formofwork" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="formofwork" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">項目設定（部署）</td>
+					<td><label class="radio_text right_30"><input name="department" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="department" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="department" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td rowspan="10" class="s_10 bg_gray">勤怠管理</td>
+					<td class="s_14 bg_gray">勤怠データ管理</td>
+					<td class="s_30"><label class="radio_text right_30"><input name="management" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="management" type="radio" value="非表示" checked>非表示</label></td>
+					<td rowspan="5">
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="勤怠修正">勤怠修正</label>
+						</section>
+						<section class="check_box_wrap right_30 side_input_block">
+							<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="申請確認">申請確認</label>
+						</section>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg_gray">勤怠データ検索</td>
+					<td><label class="radio_text right_30"><input name="search" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="search" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">勤怠集計</td>
+					<td><label class="radio_text right_30"><input name="approval" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="approval" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">勤怠データ詳細</td>
+					<td><label class="radio_text right_30"><input name="details" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="details" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">個人別詳細</td>
+					<td><label class="radio_text right_30"><input name="person" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="person" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+                <tr>
+					<td class="bg_gray">有給休暇管理</td>
+					<td colspan="2"><label class="radio_text right_30"><input name="basic_holiday" type="radio" value="更新">更新</label><label class="radio_text right_30"><input name="basic_holiday" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="basic_holiday" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+				<tr>
+					<td class="bg_gray">有給休暇詳細</td>
+					<td colspan="2"><label class="radio_text right_30"><input name="basic_holiday_details" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="basic_holiday_details" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="basic_holiday_details" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+                <tr>
+					<td class="bg_gray">訪問先別勤務情報</td>
+					<td colspan="2"><label class="radio_text right_30"><input name="attendance_work_info" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="attendance_work_info" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+                <tr>
+					<td class="bg_gray">訪問先別詳細</td>
+					<td colspan="2"><label class="radio_text right_30"><input name="attendance_work_place" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="attendance_work_place" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="attendance_work_place" type="radio" value="非表示" checked>非表示</label></td>
+				</tr> 
+                <tr>
+					<td class="bg_gray">訪問勤務詳細</td>
+					<td colspan="2"><label class="radio_text right_30"><input name="attendance_shift" type="radio" value="追加・変更可能">追加・変更可能</label><label class="radio_text right_30"><input name="attendance_shift" type="radio" value="閲覧">閲覧</label><label class="radio_text"><input name="attendance_shift" type="radio" value="非表示" checked>非表示</label></td>
+				</tr>
+			</table>
+		</section>
+		<section class="setting_table secound_block">
+			<h2>締め管理者</h2>
+			<table>
+				<tr>
+					<td class="input_items">管理者1<span class="tooltip left_30"><a href="#"><img src="../../public/images/ico_hatena.svg"><span class="tool_description">従業員個人ごとの１日の締め・１ヶ月ごとの締め１日の締め・１ヶ月ごとの締め１日の締め</span></a></span></td>
+					<td><label class="radio_text right_30"><input name="admin1" type="radio" value="有り">有り</label><label class="radio_text"><input name="admin1" type="radio" value="無し" checked>無し</label></td>
+				</tr>
+				<tr>
+					<td class="input_items">管理者2</td>
+					<td><label class="radio_text right_30"><input name="admin2" type="radio" value="有り">有り</label><label class="radio_text"><input name="admin2" type="radio" value="無し" checked>無し</label></td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button right_30"><a class="m_size l_height btn_greeen l_font" href="#">保存</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="basic_admin_list.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<script>
+	   $(function() {
+	       $('#ms').change(function() {
+	           console.log($(this).val());
+	       }).multipleSelect({
+	           width: '100%'
+	       });
+	   });
+	</script>
+</body>
+</html>

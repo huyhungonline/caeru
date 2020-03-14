@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>有給休暇詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+</head>
+<body>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green"><a class="green" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="chosen_attendance yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="attendance_detail">
+		<section class="title">
+			<p class="breadcrumb"><span>勤怠管理</span>&emsp;&#62;&emsp;<a href="attendance_holiday.html">有給休暇設定</a><span>&emsp;&#62;&emsp;有給休暇詳細</span></p>
+			<div class="title_wrapper">
+				<h1>有給休暇詳細</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30 ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+				<section class="right_30 text_bold">
+					<span class="right_30">00001</span><span class="right_30">山田太郎</span><span>通常</span>
+				</section>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+		<section class="setting_table bottom_30">
+			<table>
+				<tr>
+					<td class="input_items">従業員ID</td>
+					<td>00001</td>
+				</tr>
+                <tr>
+					<td class="input_items">従業員名</td>
+					<td>山田太郎</td>
+				</tr>
+                <tr>
+					<td class="input_items">従業員名(カナ)</td>
+					<td>ヤマダタロウ</td>
+				</tr>
+                <tr>
+					<td class="input_items">採用形態</td>
+					<td>正社員</td>
+				</tr>
+                <tr>
+					<td class="input_items">有給更新日</td>
+					<td>4/1</td>
+				</tr>
+                <tr>
+					<td class="input_items">部署</td>
+					<td></td>
+				</tr>
+                <tr>
+					<td class="input_items">雇用状態</td>
+					<td>勤務中</td>
+				</tr>
+                <tr>
+					<td class="input_items">入社日</td>
+					<td>2010/04/01</td>
+				</tr>
+                <tr>
+					<td class="input_items">勤続年数</td>
+					<td>7年3ヶ月</td>
+				</tr>
+                <tr>
+					<td class="input_items">週勤務日数</td>
+					<td>一般</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table>
+                <tr>
+                    <th class="s_14">期間</th>
+                    <th class="s_8">１日の労働時間</th>
+                    <th class="s_6">出勤率</th>
+                    <th class="s_6">付与日数</th>
+                    <th class="s_10" colspan="2"><p>繰越日数</p><p>日:時間:分</p></th>
+                    <th class="s_10" colspan="2"><p>取得日数</p><p>日:時間:分</p></th>
+                    <th class="s_10" colspan="2"><p>残日数</p><p>日:時間:分</p></th>
+                    <th class="s_18">備考</th>
+                    <th class="s_8">操作年月日</th>
+                    <th>最終変更者</th>
+                </tr>
+                <!--　所定が変更になった場合 -->
+                <tr>
+					<td>2018/02/01〜2018/03/31</td>
+                    <td>4時間</td>
+                    <td rowspan="2"><input class="sss_size right_4" name="" type="text" value="90"><span>％</span></td>
+                    <td rowspan="2">12</td>
+                    <td><input class="ss_size" name="" type="text" value="14日"></td>
+                    <td><input class="ss_size" name="" type="text" value="00:00"></td>
+                    <td>2日</td>
+                    <td>03:00</td>
+                    <td>11日</td>
+                    <td>01:00</td>
+                    <td><input class="m_size" name="" type="text"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+					<td>2017/04/01〜2018/01/31</td>
+                    <td>8時間</td>
+                    <td>7日</td>
+                    <td>07:00</td>
+                    <td>6日</td>
+                    <td>01:00</td>
+                    <td>13日</td>
+                    <td>07:00</td>
+                    <td></td>
+                    <td>2017/05/01</td>
+                    <td>管理太郎</td>
+                </tr>
+                  <!--　所定が変更になっていない場合 -->
+                <tr>
+					<td>2017/04/01〜2018/03/31</td>
+                    <td>8時間</td>
+                    <td><input class="sss_size right_4" name="" type="text" value="90"><span>％</span></td>
+                    <td><input class="sss_size" name="" type="text" value="12"></td>
+                    <td><input class="ss_size" name="" type="text" value="7日"></td>
+                    <td><input class="ss_size" name="" type="text" value="07:00"></td>
+                    <td>6日</td>
+                    <td>01:00</td>
+                    <td>12日</td>
+                    <td>06:00</td>
+                    <td><input class="m_size" name="" type="text"></td>
+                    <td>2017/05/01</td>
+                    <td>管理太郎</td>
+                </tr>
+                <tr>
+					<td>2016/04/01〜2017/03/31</td>
+                    <td>8時間</td>
+                    <td>80%</td>
+                    <td>11</td>
+                    <td>3日</td>
+                    <td>03:00</td>
+                    <td>5日</td>
+                    <td>04:00</td>
+                    <td>7日</td>
+                    <td>07:00</td>
+                    <td></td>
+                    <td>2016/04/04</td>
+                    <td>管理太郎</td>
+                </tr>
+                <tr>
+					<td>2015/04/01〜2016/03/03</td>
+                    <td>8時間</td>
+                    <td>90%</td>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td>6日</td>
+                    <td>05:00</td>
+                    <td>3日</td>
+                    <td>03:00</td>
+                    <td>要確認</td>
+                    <td>2015/04/01</td>
+                    <td>管理1</td>
+                </tr>
+			</table>
+		</section>
+        <section class="btn">
+			<p class="button right_30"><a class="m_size l_height btn_greeen l_font" href="#">保存</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="attendance_holiday.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+		<section class="select_one">
+            <section class="select_one_innner">
+                <h2>勤務地変更</h2>
+                <section class="right_position">
+				    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な勤務地も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">勤務地ID</th>
+					<th class="s_8">勤務地</th>
+					<th class="s_5">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>広島県</td>
+					<td>50</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>岡山県</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>

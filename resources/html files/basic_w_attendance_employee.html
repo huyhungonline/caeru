@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>従業員詳細 | CAERU管理画面</title>
+	<link href="../../public/css/all.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/caerujs/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/caerujs/script.js"></script>
+</head>
+<body>
+<section id="header_weapper">
+	<header>
+		<a href="index.html">
+		<div id="logo"></div></a>
+		<div id="sign_out">
+			<a href="login.html">ログアウト</a>
+		</div>
+	</header>
+	<nav>
+		<ul class="gnav" id="dropmenu">
+			<li class="home">
+				<a href="index.html"></a>
+			</li>
+			<li class="green">
+				<a class="green chosen_basic" href="#">基本情報</a>
+				<ul>
+					<li><a href="basic_w_company.html">会社情報</a></li>
+					<li><a href="basic_admin_list.html">管理者情報</a></li>
+					<li><a href="basic_worklocation_list.html">勤務地情報</a></li>
+					<li><a href="basic_visit_place_list.html">訪問先情報</a></li>
+					<li><a href="basic_employee_list.html">従業員情報</a></li>
+					<li><a href="basic_first_calendar.html">カレンダー</a></li>
+					<li><a href="basic_first_config.html">設定</a></li>
+					<li><a href="basic_first_formofwork.html">項目設定</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a class="yellow" href="#">勤怠管理</a>
+				<ul>
+					<li><a href="attendance_management.html">勤怠データ管理</a></li>
+					<li><a href="attendance_search.html">勤怠データ検索</a></li>
+					<li><a href="attendance_approval.html">勤怠集計</a></li>
+					<li><a href="attendance_holiday_list.html">有給休暇管理</a></li>
+					<li><a href="attendance_work_list.html">訪問先別勤務情報</a></li>
+					<li><a href="attendance_check_list.html">チェックリスト</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</section>
+	<main id="basic">
+		<section class="title">
+			<p class="breadcrumb"><span>基本情報</span>&emsp;&#62;&emsp;<a href="basic_employee_list.html">従業員一覧</a><span>&emsp;&#62;&emsp;従業員詳細</span></p>
+			<div class="title_wrapper">
+				<h1>従業員詳細</h1>
+				<div class="worklocation">
+					<div class="worklocation_inner">
+						<span class="right_10">広島本社</span>
+						<p class="button"><a class="modal-open ss_size s_height btn_gray" data-target="con1">変更</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search_result">
+			<section class="resule_innner">
+				<span class="red right_30">検索結果128件</span><span class="right_10 text_bold">状態</span><span class="right_30">勤務中</span><span class="right_10 text_bold">雇用形態</span><span class="right_30">正社員</span>
+			</section>
+			<section>
+				<p class="button right"><a class="m_size m_height btn_greeen" href="#">検索条件の変更</a></p>
+			</section>
+		</section>
+		<section class="select_one bg_light_green bottom_10">
+			<section class="select_one_inner">
+				<section class="right_30 ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_left1.svg"></a>
+				</section>
+				<section class="right_30 text_bold">
+					<span class="right_30">00001</span><span>山田太郎</span>
+				</section>
+				<section class="ico_position">
+					<a href="#"><img class="ico_ico_arrow" src="../../public/images/ico_arrow_right1.svg"></a>
+				</section>
+			</section>
+		</section>
+        <section class="select_one2">
+		<section class="tab">
+			<p class="tab_button"><a class="tab_size tab_btn_gray left right_10" href="basic_w_employee.html">基本</a></p>
+			<p class="tab_button"><a class="tab_size btn_yellow left" href="basic_w_attendance_employee.html">勤怠</a></p>
+		</section>
+        </section>
+		<section class="setting_table bottom_30">
+			<table>
+				<tr>
+					<td class="input_items">ICカード登録用番号</td>
+					<td>1111111111</td>
+				</tr>
+				<tr>
+					<td class="input_items">カード番号</td>
+					<td>
+							<span class="right_30 left">134534</span>
+							<section class="check_box_wrap">
+								<label class="checkbox_text"><input name="hugahuga" type="checkbox" value="カード削除">カード削除</label>
+							</section>
+					</td>
+				</tr>
+				<tr>
+					<td class="input_items">有給休暇</td>
+					<td>
+                        <section class="second">
+                            <section class="check_box_wrap right_30 side_input_block">
+                                <label class="checkbox_text"><input name="hugahuga" type="checkbox" value="有給対象外">有給対象外</label>
+                            </section>
+                            <span class="right_10">更新日</span><input class="ss_size right_30" name="" type="text">
+						</section>
+						<section class="second dash_line">
+                            <section class="right_30 side_input_block">
+                                <span class="right_10">現在の１日の労働時間</span><input class="ss_size right_4" name="" type="text"><span>時間</span>
+                            </section>
+                            <section class="right_30 side_input_block">
+                                <input class="s_size right_4" name="" type="text"><span class="right_10">から１日の労働時間を</span><input class="ss_size right_10" name="" type="text"><span>時間に変更</span>
+                            </section>
+						</section>
+						<section class="second dash_line">
+                            <div class="side_input_block">
+                                <label class="radio_text right_30"><input name="kinmuchi" type="radio" value="一般" checked>一般</label><label class="radio_text right_4"><input name="kinmuchi" type="radio" value="短時間労働者">短時間労働者</label>
+                                <select class="s_size">
+                                    <option selected="selected"></option>
+                                    <option value="週4日">週4日</option>
+                                    <option value="週3日">週3日</option>
+                                    <option value="週2日">週2日</option>
+                                    <option value="週1日">週1日</option>
+                                    <option value="手動入力">手動入力</option>
+                                </select>
+                            </div>
+						</section>
+					</td>
+				</tr>
+			</table>
+		</section>
+        <section class="btn">
+			<p class="button right_30"><a class="m_size l_height btn_greeen l_font" href="#">設定を保存</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="basic_employee_list.html">一覧に戻る</a></p>
+		</section>
+        <section class="select_one2">
+		<section class="right_position">
+					<p class="button"><a class="s_size s_height btn_blue" href="#">追加</a></p>
+        </section>
+        </section>
+		<section class="work_plan">
+			<table>
+				<th colspan="2" class="normal_height">勤務設定</th>
+				<tr>
+					<td>
+						<section class="bottom_10 side_input_block second">
+							<div class="side_input_block right_10"><span class="red">※</span>勤務日は</div>
+							<div class="side_input_block"><label class="radio_text right_30"><input name="hogehoge" type="radio" checked value="企業カレンダーに従う">企業カレンダーに従う</label><label class="radio_text"><input name="hogehoge" type="radio" value="オリジナル勤務">オリジナル</label></div>
+						</section>	
+					</td>
+					<td rowspan="2">
+						<section class="unit">
+							<p class="bottom_10"><span class="button"><a class="ss_size s_height btn_greeen" href="#">保存</a></span></p>
+							<p class="bottom_10"><span class="button"><a class="ss_size s_height btn_greeen" href="#">コピー</a></span></p>
+							<p><span class="button"><a class="ss_size s_height btn_black" href="#">削除</a></span></p>
+						</section>
+					</td>		
+				</tr>
+				<tr>
+					<td>
+                        <section class="second">
+                            <section class="left unit right_30">
+                                <p>勤務日</p>
+                                <div class="check_box_wrap side_input_block">
+									<input class="s_size right_10" name="" type="text"><span class="right_10 ">〜</span><input class="s_size" name="" type="text">
+								</div>  
+                            </section>
+<!--
+                            <div class="selectbox left right_10">
+                                <div>&nbsp;</div>
+									<select class="s_size">
+										<option selected="selected" value="毎週">毎週</option>
+										<option value="1">毎月第1</option>
+										<option value="2">毎月第2</option>
+										<option value="3">毎月第3</option>
+										<option value="4">毎月第4</option>
+										<option value="5">毎月第5</option>
+										<option value="6">2週間おき</option>
+										<option value="7">休日</option>
+										<option value="8">1日おき</option>
+										<option value="9">2勤2休</option>
+									</select>
+                            </div>
+-->
+                             <section class="side_input_block unit right_10">
+                                <p>月</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="月" checked="checked"></label>
+                                </div>
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p>火</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="火" checked="checked"></label>
+                                </div>
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p>水</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="水" checked="checked"></label>
+                                </div>
+                            </section>
+                             <section class="side_input_block unit right_10">
+                                <p>木</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="木" checked="checked"></label>
+                                </div>
+                            </section>
+                             <section class="side_input_block unit right_10">
+                                <p>金</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="金" checked="checked"></label>
+                                </div>
+                            </section>
+                             <section class="side_input_block unit right_10">
+                                <p>土</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="土" checked="checked"></label>
+                                </div>
+                            </section>
+                             <section class="side_input_block unit right_10">
+                                <p>日</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="日" checked="checked"></label>
+                                </div>
+                            </section>
+                             <section class="side_input_block unit right_30">
+                                <p>祝日は休む</p>
+                                <div class="check_onle_wrap">
+                                    <label class="checkbox_box"><input name="hugahuga" type="checkbox" value="祝日は休む"></label>
+                                </div>
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p>出勤</p>
+                                <div class="side_input_block">
+									<input class="ss_size" name="" type="text">
+								</div>  
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p>退勤</p>
+                                <div class="side_input_block">
+									<input class="ss_size" name="" type="text">
+								</div>  
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p><span class="red">※</span>休憩</p>
+                                <div class="side_input_block">
+									<input class="ss_size" name="" type="text">
+								</div>  
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p>(内)深休</p>
+                                <div class="side_input_block">
+									<input class="ss_size" name="" type="text">
+								</div>  
+                            </section>
+                            <section class="side_input_block unit right_10">
+                                <p><span class="red">※</span>所定</p>
+                                <div class="side_input_block">
+									<input class="ss_size" name="" type="text">
+								</div>  
+                            </section>
+                        </section>
+						<section class="second dash_line">
+                            <section class="right_10 side_input_block">
+                                <div class="m_size">&nbsp;</div>
+                                    <div class="selectbox side_input_block">
+                                        <select class="m_size">
+                                            <option value=""></option>
+                                            <option value="広島本社">広島本社</option>
+                                            <option value="岡山支社">岡山支社</option>
+                                            <option value="東京本社">東京本社</option>
+                                            <option value="長崎支社">長崎支社</option>
+                                         </select>
+                                    </div>
+                                <div class="bottom_10 m_size">&nbsp;</div>
+                            </section>
+							<section class="right_10 side_input_block">
+                                <div>&nbsp;</div>
+                                <div class="selectbox side_input_block right_10 top_position">
+									<select class="s_size">
+                                        <option selected="selected"></option>
+										<option value="固定">固定</option>
+										<option value="候補">候補</option>
+									</select>
+								</div>
+                                <div class="side_input_block">
+                                    <p class="bottom_10"><span class="right_10 side_input_block">訪問先</span><input class="m_size" name="" type="text"></p>
+                                    <p><span class="right_10 side_input_block">必要人数</span><input class="right_4 ss_size40" name="" type="text"><span class="side_input_block">人</span></p>
+                                </div>
+							</section>
+                                <div class="right_4 side_input_block">
+                                    <div>&nbsp;</div>
+                                    <div class="bottom_10">
+                                        <span class="side_input_block right_10"></span>
+                                        <div class="selectbox side_input_block enpty_box">
+                                        <select class="s_size">
+                                            <option selected="selected" value="月給">月給</option>
+                                            <option value="1">時給</option>
+                                            <option value="2">日給</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="side_input_block right_10">祝日</span>
+                                        <div class="selectbox side_input_block">
+                                        <select class="s_size">
+                                            <option selected="selected" value="月給">月給</option>
+                                            <option value="1">時給</option>
+                                            <option value="2">日給</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right_10 side_input_block">
+                                    <div class="bottom_10">
+                                        <div class="right_4 side_input_block unit">
+                                        <p>基本給</p>
+                                        <input class="s_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <div class="right_4 side_input_block unit">
+                                        <input class="s_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                                <div class="right_10 left_10 side_input_block">
+                                    <div class="bottom_10">
+                                        <div class="right_4 side_input_block unit">
+                                        <p>深夜</p>
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <div class="right_4 side_input_block unit">
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                                <div class="right_10 left_10 side_input_block">
+                                    <div class="bottom_10">
+                                        <div class="right_4 side_input_block unit">
+                                        <p>残業</p>
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <div class="right_4 side_input_block">
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                                <div class="right_10 left_10 side_input_block">
+                                    <div class="bottom_10">
+                                        <div class="right_4 side_input_block unit">
+                                        <p>控除</p>
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <div class="right_4 side_input_block">
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                                <div class="right_30 left_10 side_input_block">
+                                    <div class="bottom_10">
+                                        <div class="right_4 side_input_block unit">
+                                        <p>深夜控除</p>
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <div class="right_4 side_input_block">
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                            <section class="unit side_input_block">
+                                <div>
+                                    <div class="bottom_10">
+                                        <span class="side_input_block right_10 bottom_position">月額</span>
+                                        <div class="right_4 side_input_block">
+                                        <div>交通費</div>
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                    <div>
+                                        <span class="side_input_block right_10 bottom_position">日額</span>
+                                        <div class="right_4 side_input_block">
+                                        <input class="ss_size side_input_block" name="" type="text">
+                                        </div>
+                                        <span class="side_input_block bottom_position">円</span>
+                                    </div>
+                                </div>
+                            </section>
+						</section>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button right_30"><a class="mm_size l_height btn_greeen l_font" href="#">スケジュールを保存</a></p>
+			<p class="button right_30"><a class="m_size l_height btn_gray l_font" href="#">キャンセル</a></p>
+			<p class="button"><a class="m_size l_height btn_gray l_font" href="basic_employee_list.html">一覧に戻る</a></p>
+		</section>
+	</main>
+	<div class="modal-content select_location" id="con1">
+		<section class="select_one">
+            <section class="select_one_innner">
+                <h2>勤務地変更</h2>
+                <section class="right_position">
+                    <p class="button left_10"><a class="mm_size s_height btn_gray modal-open" data-target="con1" href="#">無効な勤務地も表示</a></p>
+                </section>
+            </section>
+        </section>
+		<section class="default_table">
+			<table>
+				<tr>
+					<th class="s_5">勤務地ID</th>
+					<th class="s_8">勤務地</th>
+					<th class="s_5">都道府県</th>
+					<th class="s_5">従業員数</th>
+					<th class="s_5"></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>会社</td>
+					<td>広島県</td>
+					<td>150</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00001</td>
+					<td>広島本社</td>
+					<td>広島県</td>
+					<td>50</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00002</td>
+					<td>岡山支社</td>
+					<td>岡山県</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00003</td>
+					<td>東京本社</td>
+					<td>東京都</td>
+					<td>20</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00004</td>
+					<td>長崎支社</td>
+					<td>長崎県</td>
+					<td>10</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td>00005</td>
+					<td>横浜支社</td>
+					<td>神奈川県</td>
+					<td>30</td>
+					<td>
+						<p class="button"><a class="ss_size s_height btn_gray" href="#">選択</a></p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section class="btn">
+			<p class="button"><a class="modal-close m_size l_height btn_gray l_font">キャンセル</a></p>
+		</section>
+	</div>
+</body>
+</html>
